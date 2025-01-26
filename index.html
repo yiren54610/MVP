@@ -119,6 +119,13 @@
             transform: scale(1.05); /* Slightly enlarges the iframe */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
         }
+
+        h2:hover {
+            transform: scale(1.05); /* Slightly enlarges the h2 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
     </style>
 </head>
 
@@ -139,17 +146,22 @@
     <div class="row">
         <div class="leftcolumn">
             <div class="card">
-                <h2>
+                <h2>Popular Color Tracking
                     <a href="https://yiren54610.github.io/Foundation_final/" 
                        target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                       Popular Color Tracking
+                       style="text-decoration: none; color: inherit;"> 
                     </a>
                 </h2>
                 <h5>This is a website that tracks emerging color trends</h5>
-                <iframe src="https://yiren54610.github.io/Foundation_final/" 
-                class="iframe-container">
-                </iframe>
+                <a href="https://yiren54610.github.io/Foundation_final/" 
+                target="_blank" 
+                style="text-decoration: none; color: inherit;">
+                    <iframe src="https://yiren54610.github.io/Foundation_final/" 
+                            class="iframe-container" 
+                            style="border: none; width: 100%; height: 300px;">
+                    </iframe>
+                </a>
+             
                 <p>Some text..</p>
                 <p>auto-updating.</p>
             </div>
