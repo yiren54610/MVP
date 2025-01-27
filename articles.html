@@ -49,14 +49,7 @@
         /* 左*/
         .leftcolumn {
             float: left;
-            width: 75%;
-        }
-
-        /* 右*/
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
+            width: 100%;
         }
 
         /* 伪图像 */
@@ -68,9 +61,11 @@
 
         /* 为文章添加卡片效果 */
         .card {
-            background-color: white;
+            background-color: #f2f2ea;
             padding: 20px;
             margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
         }
 
         /* 清除列之后的浮动 */
@@ -90,9 +85,7 @@
 
         /* 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
         @media screen and (max-width: 800px) {
-
-            .leftcolumn,
-            .rightcolumn {
+            .leftcolumn {
                 width: 100%;
                 padding: 0;
             }
@@ -106,22 +99,25 @@
             }
         }
 
-        .iframe-container {
+        .iframe-container,
+        .caption {
             width: 100%;
             height: 400px;
             border: none;
             border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .iframe-container:hover {
-            transform: scale(1.05); /* Slightly enlarges the iframe */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        .iframe-container:hover,
+        .caption {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         h2:hover {
-            transform: scale(1.05); /* Slightly enlarges the h2 */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .row {
@@ -134,17 +130,19 @@
             margin: 1%;
         }
 
-        .col:nth-child(3n+1) {
+        .col:nth-child(3n + 1) {
             order: 1;
         }
 
-        .col:nth-child(3n+2) {
+        .col:nth-child(3n + 2) {
             order: 2;
         }
 
         .col:nth-child(3n) {
             order: 3;
         }
+
+
     </style>
 </head>
 
@@ -156,8 +154,8 @@
     </div>
 
     <div class="topnav">
-        <a href="#">Data Viz</a>
-        <a href="#">Articles</a>
+        <a href="index.html">Data Viz</a>
+        <a href="articles.html">Articles</a>
         <a href="#">Data Works</a>
         <a href="#" style="float:right">Link</a>
     </div>
@@ -166,164 +164,54 @@
         <div class="col">
             <div class="card">
                 <h2>
-                    <a href="https://yiren54610.github.io/Foundation_final/" 
+                    <a href="http://theuptowner.org/anti-vaccine-demonstrators-spread-false-conspiracy-theories-at-harlem-rally/" 
                        target="_blank" 
-                       style="text-decoration: none; color: inherit;">Popular Color Tracking
+                       style="text-decoration: none; color: inherit;">Anti-vaxxers Calls process of Vaccination “invasive” and “profit making” by Big Pharmas in Harlem Rally
                     </a>
                 </h2>
-                <h5>This is a website that tracks emerging color trends</h5>
-                <iframe src="https://yiren54610.github.io/Foundation_final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>auto-updating.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Map_Final/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">BBC Movie Menu
-                    </a>
-                </h2>
-                <h5>This is an interative map that is based upon BBC's 100 movie critics' recommendation.</h5>
-                <iframe src="https://yiren54610.github.io/Map_Final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>TBC.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>ABCDEFG.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Foundation_final/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">Popular Color Tracking
-                    </a>
-                </h2>
-                <h5>This is a website that tracks emerging color trends</h5>
-                <iframe src="https://yiren54610.github.io/Foundation_final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>auto-updating.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Map_Final/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">BBC Movie Menu
-                    </a>
-                </h2>
-                <h5>This is an interative map that is based upon BBC's 100 movie critics' recommendation.</h5>
-                <iframe src="https://yiren54610.github.io/Map_Final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>TBC.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>ABCDEFG.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Foundation_final/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">Popular Color Tracking
-                    </a>
-                </h2>
-                <h5>This is a website that tracks emerging color trends</h5>
-                <iframe src="https://yiren54610.github.io/Foundation_final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>auto-updating.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Map_Final/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">BBC Movie Menu
-                    </a>
-                </h2>
-                <h5>This is an interative map that is based upon BBC's 100 movie critics' recommendation.</h5>
-                <iframe src="https://yiren54610.github.io/Map_Final/" 
-                        class="iframe-container">
-                </iframe>
-                <p>Some text..</p>
-                <p>TBC.</p>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>ABCDEFG.</p>
-            </div>
-        </div>
-    </div>
+                <h5>Yiren Lu, Rashi Mishra</h5>
+                <div class="caption">
+                    <img src="harlem.jpeg" 
+                    class="iframe-container" style="width: 100%">
+                    </img>
+                </div>
 
-    <div class="rightcolumn">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <h2>About Me</h2>
-                    <img src="mypic.jpg" alt="Yiren Lu in Philly" height="150">
-                    <p>Candidate @ Columbia Journalism School</p>
-                </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <h3>Recent Activities.</h3>
-                    <div class="fakeimg">
-                        <p>Image</p>
-                    </div>
-                    <div class="fakeimg">
-                        <p>Image</p>
-                    </div>
-                    <div class="fakeimg">
-                        <p>Image</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <h3>Follow Me</h3>
-                    <p><b>LinkedIn</b> 
-                        <a>https://www.linkedin.com/in/yiren-lu-777295237</a>
-                        <br>
-                        <b>Email:</b> yl5732@columbia.edu
-                    </p>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <h2>
+                    <a href="http://theuptowner.org/trash-bin-program-eases-harlem-rat-sightings-but-parking-challenges-continue/" 
+                       target="_blank" 
+                       style="text-decoration: none; color: inherit;">Trash Bin Program Eases Rat Issues But Parking Challenges Continue
+                    </a>
+                </h2>
+                <h5>Yiren Lu</h5>
+                <div class="caption">
+                    <img src="harlem.jpeg" 
+                    class="iframe-container" style="width: 100%">
+                    </img>
                 </div>
             </div>
         </div>
+
+        <div class="col">
+            <div class="card">
+                <h2>
+                    <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/" 
+                       target="_blank" 
+                       style="text-decoration: none; color: inherit;">K-3 Classes Remain Overcrowded in Harlem Schools
+                    </a>
+                </h2>
+                <h5>Yiren Lu, Tiffany Wang</h5>
+                <iframe src="Harlem-Schools-800x365.jpg" 
+                        class="iframe-container">
+                </iframe>
+            </div>
+        </div>
+
     </div>
-    
 
     <div class="footer">
         <h2>Yiren Lu 2024</h2>
@@ -332,5 +220,3 @@
 </body>
 
 </html>
-
-

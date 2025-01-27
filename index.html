@@ -11,23 +11,40 @@
             font-family: Arial;
             padding: 10px;
             background: #333333;
+            margin-top: 120px;
         }
 
         /* 页眉*/
         .header {
             padding: 30px;
             text-align: center;
-            background: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            height: auto;
+            background-color: #333333;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
 
         .header h1 {
-            font-size: 50px;
+            font-size: 30px;
+            color: #f2f2f2;
         }
 
         /* 导航栏的样式 */
         .topnav {
             overflow: hidden;
-            background-color: #333;
+            z-index: 2;
+            position: fixed; /* 固定导航栏 */
+            top: 90px; /* 设置导航栏位置，避免被页眉覆盖 */
+            width: 100%; /* 导航栏宽度占满屏幕 */
         }
 
         /* topnav 链接的样式 */
@@ -68,9 +85,11 @@
 
         /* 为文章添加卡片效果 */
         .card {
-            background-color: white;
+            background-color: #f2f2ea;
             padding: 20px;
             margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* 清除列之后的浮动 */
@@ -112,6 +131,7 @@
             border: none;
             border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .iframe-container:hover {
@@ -125,18 +145,35 @@
         }
 
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
 </head>
 
 <body>
 
     <div class="header">
         <h1>Yiren Lu's Website</h1>
-        <p>This is a collection of Lu's works.</p>
     </div>
 
+    <script>
+        window.onscroll = function() {myFunction()};
+    
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+    
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
     <div class="topnav">
-        <a href="#">Data Viz</a>
-        <a href="#">Articles</a>
+        <a href="index.html">Data Viz</a>
+        <a href="articles.html">Articles</a>
         <a href="#">Data Works</a>
         <a href="#" style="float:right">Link</a>
     </div>
@@ -172,7 +209,7 @@
                 <p>Some text..</p>
                 <p>TBC.</p>
             </div>
-            
+
             <div class="card">
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Sep 2, 2017</h5>
@@ -202,10 +239,14 @@
             </div>
             <div class="card">
                 <h3>Follow Me</h3>
-                <p><b>LinkedIn</b> 
-                    <a>https://www.linkedin.com/in/yiren-lu-777295237</a>
+                <p>
+                    <a href="https://www.linkedin.com/in/yiren-lu-777295237">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                     <br>
-                    <b>Email:</b> yl5732@columbia.edu
+                    <i class="fab fa-lg fa-cellphone"> 860-975-7661</i> 
+                    <br>
+                    <i class="fab fa-lg fa-cellphone">yl5732@columbia.edu </i>
                 </p>
             </div>
         </div>
