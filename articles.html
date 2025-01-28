@@ -22,7 +22,7 @@
             width: 100%;
             z-index: 1;
             height: auto;
-            background-color: #333333;
+            background-color: rgba(51, 51, 51, 0.5);
         }
 
         .sticky {
@@ -40,7 +40,10 @@
         /* 导航栏的样式 */
         .topnav {
             overflow: hidden;
-            background-color: #333;
+            z-index: 2;
+            position: fixed; /* 固定导航栏 */
+            top: 90px; /* 设置导航栏位置，避免被页眉覆盖 */
+            width: 100%; /* 导航栏宽度占满屏幕 */
         }
 
         /* topnav 链接的样式 */
@@ -92,7 +95,7 @@
         .footer {
             padding: 20px;
             text-align: center;
-            background: #ddd;
+            background-color: rgba(221, 221, 221, 0.5);
             margin-top: 20px;
         }
 
@@ -141,6 +144,7 @@
         .col {
             flex: 1 0 30%;
             margin: 1%;
+            margin-top: 100px;
         }
 
         .col:nth-child(3n + 1) {
@@ -163,7 +167,6 @@
 
     <div class="header">
         <h1>Yiren Lu's Website</h1>
-        <p>This is a collection of Lu's works.</p>
     </div>
 
     <script>
@@ -215,7 +218,11 @@
                        style="text-decoration: none; color: inherit;">Trash Bin Program Eases Rat Issues But Parking Challenges Continue
                     </a>
                 </h2>
-                <h5>Yiren Lu</h5>
+                <h5>Yiren Lu
+                    <br>
+                    September 23, 2024
+                </h5>
+                
                 <div class="caption">
                     <img src="transhbin.jpg" 
                     class="iframe-container" style="width: 100%">
