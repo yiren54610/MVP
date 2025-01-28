@@ -17,11 +17,24 @@
         .header {
             padding: 30px;
             text-align: center;
-            background: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            height: auto;
+            background-color: #333333;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
 
         .header h1 {
-            font-size: 50px;
+            font-size: 30px;
+            color: #f2f2f2;
         }
 
         /* 导航栏的样式 */
@@ -153,6 +166,21 @@
         <p>This is a collection of Lu's works.</p>
     </div>
 
+    <script>
+        window.onscroll = function() {myFunction()};
+    
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+    
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
     <div class="topnav">
         <a href="index.html">Data Viz</a>
         <a href="articles.html">Articles</a>
@@ -189,7 +217,7 @@
                 </h2>
                 <h5>Yiren Lu</h5>
                 <div class="caption">
-                    <img src="harlem.jpeg" 
+                    <img src="transhbin.jpg" 
                     class="iframe-container" style="width: 100%">
                     </img>
                 </div>
