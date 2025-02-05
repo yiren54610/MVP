@@ -9,9 +9,10 @@
 
         body {
             font-family: Arial;
-            padding: 10px;
-            background: #333333;
-            margin-top: 120px;
+            padding: 0;
+            background:radial-gradient(circle, #fce4ec 30%, #f8bbd0 100%);
+            margin-left:0;
+            margin-top: 130px;
         }
 
         /* 页眉*/
@@ -23,7 +24,7 @@
             width: 100%;
             z-index: 1;
             height: auto;
-            background-color: rgba(51, 51, 51, 0.5);
+            background-color: rgba(221, 221, 221, 0.5);
         }
 
         .sticky {
@@ -35,7 +36,7 @@
 
         .header h1 {
             font-size: 30px;
-            color: #f2f2f2;
+            color: #4e4e4e;
         }
 
         /* 导航栏的样式 */
@@ -51,7 +52,7 @@
         .topnav a {
             float: left;
             display: block;
-            color: #f2f2f2;
+            color: #4e4e4e;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -85,7 +86,7 @@
 
         /* 为文章添加卡片效果 */
         .card {
-            background-color: #f2f2ea;
+            background-color: #f2f2f2;
             padding: 20px;
             margin-top: 20px;
             border-radius: 12px;
@@ -139,10 +140,50 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
         }
 
+        h2 {
+            color: #6b8e75;
+        }
+
         h2:hover {
             transform: scale(1.05); /* Slightly enlarges the h2 */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
         }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin: 4px;
+            text-transform: capitalize;
+            white-space: nowrap;
+            color: white; /* Default text color */
+            }
+
+            /* Fixed colors for each skill */
+            .tag[data-skill="Python"] {
+            background-color: #3776AB; /* Python Blue */
+            }
+
+            .tag[data-skill="RStudio"] {
+            background-color: #75AADB; /* RStudio Blue */
+            }
+
+            .tag[data-skill="Webscraping"] {
+            background-color: #F59E0B; /* Amber */
+            }
+
+            .tag[data-skill="BeautifulSoup"] {
+            background-color: #4CAF50; /* Green */
+            }
+
+            .tag[data-skill="Playwright"] {
+            background-color: darkkhaki; /* Purple */
+            }
+            p {
+            color: #3d3d3d; /* Neutral dark gray */}
+
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -174,7 +215,7 @@
     <div class="topnav">
         <a href="index.html">Data Story</a>
         <a href="articles.html">Articles</a>
-        <a href="#">Data Works</a>
+        <a href="#">Audio & Video</a>
         <a href="#" style="float:right">Link</a>
     </div>
 
@@ -187,12 +228,12 @@
                        style="text-decoration: none; color: inherit;">Popular Color Tracking
                     </a>
                 </h2>
-                <h5>This is a website that tracks emerging color trends</h5>
+                <p>This is a website that tracks emerging color trends</p>
                     <iframe src="https://yiren54610.github.io/Foundation_final/" 
                             class="iframe-container">
                     </iframe>
-                <p>Some text..</p>
-                <p>auto-updating.</p>
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="Playwright">Playwright</span>
             </div>
 
             <div class="card">
@@ -202,17 +243,19 @@
                        style="text-decoration: none; color: inherit;">BBC Movie Menu
                     </a>
                 </h2>
-                <h5>This is an interative map that is based upon BBC's 100 movie critics' recommendation.</h5>
+                <p>This is an interative map that is based upon BBC's 100 movie critics' recommendation.</p>
                     <iframe src="https://yiren54610.github.io/Map_Final/" 
                             class="iframe-container">
                     </iframe>
-                <p>Some text..</p>
-                <p>TBC.</p>
+                
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                <span class="tag" data-skill="Webscraping">Webscraping</span>
             </div>
 
             <div class="card">
                 <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
+                <p>Title description, Sep 2, 2017</p>
                 <div class="fakeimg" style="height:200px;">Image</div>
                 <p>Some text..</p>
                 <p>ABCDEFG.</p>
@@ -223,28 +266,49 @@
             <div class="card">
                 <h2>About Me</h2>
                     <img src="mypic.jpg" alt="Yiren Lu in Philly" height="150">
-                <p>Candidate @ Columbia Journalism School</p>
+                <p><b>Candidate @ Columbia Journalism School</b>
+                    <br>
+                    <br>Hi there! Welcome to my website. 
+                    <br>
+                    <br>This is the garden of my inner world.
+                    <br>
+                    <br>I was an anthropologist with a background 
+                    <br>
+                    <br>in statistics before transitioning into 
+                    <br>
+                    <br>journalism, so I explore the human world 
+                    <br>
+                    <br>through a quantitative lens.
+                    <br>
+                    <br>Interested in visual storytelling and data viz
+                    <br>
+                    <br>Feel free to contact me!
+                </p>
             </div>
             <div class="card">
-                <h3>Recent Activities.</h3>
-                <div class="fakeimg">
-                    <p>Image</p>
-                </div>
-                <div class="fakeimg">
-                    <p>Image</p>
-                </div>
-                <div class="fakeimg">
-                    <p>Image</p>
-                </div>
+                <h2>Recent Activities.</h2>
+                <p>
+                    Right now, I am working on a small project 
+                    <br>
+                    <br>that studies Team USA's performance in the 
+                    <br>
+                    <br>historical summer olympic games. I will 
+                    <br>
+                    <br>share the findings within a week.  
+                    <br>
+                    <br>Stay tuned! (Last updated on 2024-03-25)
+                </p>
             </div>
             <div class="card">
-                <h3>Follow Me</h3>
+                <h2>Follow Me</h2>
                 <p>
                     <a href="https://www.linkedin.com/in/yiren-lu-777295237">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <br>
+                    <br>
                     <i class="fab fa-lg fa-cellphone"> 860-975-7661</i> 
+                    <br>
                     <br>
                     <i class="fab fa-lg fa-cellphone">yl5732@columbia.edu </i>
                 </p>
