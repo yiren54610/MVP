@@ -190,6 +190,25 @@
                 color: rgba(221, 221, 221, 0.5);
             }
 
+            .content {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: left;
+            }
+
+            .image-container {
+                width: 100%;
+                max-width: 640px; /* Prevents it from getting too large */
+                height: auto;
+                border-radius: 12px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: block;
+            }
+            .image-container:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
 
     </style>
     
@@ -220,7 +239,7 @@
 
     <div class="topnav">
         <a href="index.html">Data</a>
-        <a href="articles.html">Articles</a>
+        <a href="articles.html">Reporting</a>
         <a href="#">Audio & Video</a>
         <a href="Yiren_Lu_Resume.pdf" download style="float:right">Resume</a>
     </div>
@@ -268,10 +287,10 @@
                     </a>
                 </h2>
                 <p>Comparing percentages of medals obtained, average medal counts per person, and total numbers.</p>
-                <iframe alt="Olympics_all_medal scatter plots preview" src="team.png" class="iframe-container" style="width: 500px; height: 300px; border-radius: 50px;"></iframe>
+                <div class="content" style="text-align: left;">
+                <img alt="Olympics_all_medal scatter plots preview" src="team.png" class="image-container"></img>
 
-
-
+                </div>
                     <span class="tag" data-skill="Python">Python</span>
                     <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
                     <span class="tag" data-skill="Webscraping">Webscraping</span>
@@ -332,6 +351,15 @@
                         <span class="icon is-large">
                             <a href="https://www.linkedin.com/in/yiren-lu-777295237/">
                             <i class="fab fa-linkedin" aria-hidden="true">
+                            </i>
+                            </a>
+                        </span>
+                    </span>
+
+                    <span class="icon-text">
+                        <span class="icon is-large">
+                            <a href="https://www.linkedin.com/in/yiren-lu-777295237/">
+                            <i class="far fa-envelope" aria-hidden="true">
                             </i>
                             </a>
                         </span>
