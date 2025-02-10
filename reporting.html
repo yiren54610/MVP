@@ -85,6 +85,7 @@
             margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 12px;
+            height: 650px;
         }
 
         /* 清除列之后的浮动 */
@@ -118,6 +119,14 @@
             }
         }
 
+        .iframe-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+            position: relative；
+            overflow: hidden;
+        }
+
         .iframe-container,
         .caption {
             width: 100%;
@@ -126,12 +135,26 @@
             border-radius: 12px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            
+        }
+
+        .iframe-container img {
+            width: auto; 
+            height: auto; 
+            max-width: 100%; 
+            max-height: 100%; 
+            position: absolute; 
+            bottom: 0; 
+            left: 50%; 
+            transform: translateX(-50%); 
         }
 
         .iframe-container:hover,
         .caption {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
         }
 
         h2 {
@@ -248,10 +271,15 @@
                        style="text-decoration: none; color: inherit;">K-3 Classes Remain Overcrowded in Harlem Schools
                     </a>
                 </h2>
-                <p>Yiren Lu, Tiffany Wang</p>
-                <iframe src="pictures/Harlem-Schools-800x365.jpg" 
-                        class="iframe-container">
-                </iframe>
+                <p>Yiren Lu, Tiffany Wang
+                    <br>
+                    October 18, 2024
+                </p>
+                <div class="caption">
+                    <img src="pictures/Harlem-Schools-800x365.jpg" 
+                    class="iframe-container" style="width: 100%">
+                    </img>
+                </div>
             </div>
         </div>
 
