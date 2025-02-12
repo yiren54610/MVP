@@ -9,7 +9,7 @@
 
         body {
             font-family: Arial;
-            padding: 10px;
+            padding: 30px;
             background: radial-gradient(circle, #fce4ec 30%, #f8bbd0 100%);
             margin-top: 60px;
             margin-left: 0;
@@ -44,7 +44,7 @@
         .topnav {
             overflow: hidden;
             z-index: 2;
-            position: fixed; /* 固定导航栏 */
+            position: fixed; 
             top: 90px; /* 设置导航栏位置，避免被页眉覆盖 */
             width: 100%; /* 导航栏宽度占满屏幕 */
         }
@@ -71,21 +71,16 @@
             width: 100%;
         }
 
-        /* 伪图像 */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-
         /* 为文章添加卡片效果 */
         .card {
             background-color: #f2f2ea;
             padding: 20px;
+            margin: 10px;
             margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 12px;
             height: 650px;
+            width: auto;
             position: relative;
         }
 
@@ -120,16 +115,6 @@
             }
         }
 
-        .iframe-container {
-            width: 100%;
-            height: 400px;
-            margin-bottom: 20px;
-            position: absolute
-            overflow: hidden;
-            bottom: 0;
-            
-        }
-
         .iframe-container,
         .caption {
             width: 100%;
@@ -142,15 +127,22 @@
             
         }
 
+        .iframe-container {
+            width: 100%;
+            height: 400px; 
+            position: relative;
+            overflow: hidden; 
+            border-radius: 12px; 
+        }
+
         .iframe-container img {
-            width: auto; 
-            height: auto; 
-            max-width: 100%; 
-            max-height: 100%; 
-            position: absolute; 
-            bottom: 0; 
-            left: 50%; 
-            transform: translateX(-50%); 
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
         }
 
         .iframe-container:hover,
@@ -173,13 +165,13 @@
         .row {
             display: flex;
             flex-wrap: wrap;
+            
         }
 
         .col {
-            flex: 1 0 30%;
-            margin: 1%;
-            margin-top: 100px;
-        }
+            flex: 0 0 calc(33.33% - 20px); /* 三等分屏幕，减去间隙 */
+            margin: 10px; /* 每个 card 之间的间隙 */
+            box-sizing: border-box;}
 
         .col:nth-child(3n + 1) {
             order: 1;
@@ -236,9 +228,9 @@
                     </a>
                 </h2>
                 <p>Yiren Lu, Rashi Mishra</p>
-                <div class="caption">
+                <div class="iframe-container">
                     <img src="pictures/harlem.jpeg" 
-                    class="iframe-container" style="width: 100%">
+                    alt="Anti-vaxxers rally in Harlem" style="width: 100%">
                     </img>
                 </div>
 
@@ -258,9 +250,9 @@
                     September 23, 2024
                 </p>
                 
-                <div class="caption">
+                <div class="iframe-container">
                     <img src="pictures/transhbin.jpg" 
-                    class="iframe-container" style="width: 100%">
+                    alt= "Trash bins in the street." style="width: 100%">
                     </img>
                 </div>
             </div>
@@ -278,20 +270,37 @@
                     <br>
                     October 18, 2024
                 </p>
-                <div class="caption">
+                <div class="iframe-container">
                     <img src="pictures/Harlem-Schools-800x365.jpg" 
-                    class="iframe-container" style="width: 100%">
+                    alt="Harlem Schools" style="width: 100%">
                     </img>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <div class="footer">
-        <h2>Yiren Lu 2024</h2>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <h2>
+                    <a href="reporting/animal_shelter.html" 
+                    target="_blank" 
+                    style="text-decoration: none; color: inherit;">
+                    Crowded Kennels Sound the Alarm for NYC Animal Shelters
+                    </a>
+                </h2>
+                <p>Yiren Lu, Yating Wang
+                    <br>
+                    December 10, 2024
+                </p>
+                <div class="iframe-container">
+                    <img src="data_charts/Line_chart_catsdogs.jpeg" 
+                    alt="Line charts showing dogs and cats" style="width: 100%">
+                    </img>
+                </div>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>
