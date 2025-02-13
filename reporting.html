@@ -165,13 +165,15 @@
         .row {
             display: flex;
             flex-wrap: wrap;
-            
+            justify-content: space-between;
+            padding-left: 30px;  /* Increase this value for more space */
+            padding-right: 30px;
         }
 
         .col {
-            flex: 0 0 calc(33.33% - 20px); /* 三等分屏幕，减去间隙 */
-            margin: 10px; /* 每个 card 之间的间隙 */
-            box-sizing: border-box;}
+            flex: 1 1 calc(33.33% - 20px); /* Allow columns to grow and shrink */
+            box-sizing: border-box;
+        }
 
         .col:nth-child(3n + 1) {
             order: 1;
@@ -300,7 +302,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="col">
+            <div class="card">
+                <h2>
+                    <a href="reporting/canine.html" 
+                    target="_blank" 
+                    style="text-decoration: none; color: inherit;">
+                    Cardinal Canines: Service Dog Training at Wesleyan
+                    </a>
+                </h2>
+                <p>Yiren Lu
+                    <br>
+                    March 4, 2023
+                </p>
+                <div class="iframe-container">
+                    <img src="pictures/Service Dogs.JPG" 
+                        alt="Service Dogs" style="width: 100%">
+                    </img>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" style="visibility: hidden;">
+            <!-- Empty placeholder -->
+        </div>
     </div>
+
 </body>
 
 </html>
