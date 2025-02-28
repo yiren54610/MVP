@@ -147,6 +147,9 @@
             color: #6b8e75;
         }
 
+        .right-column-heading {
+            color: #6C7A89;
+        }
         h2:hover {
             transform: scale(1.05); /* Slightly enlarges the h2 */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
@@ -239,6 +242,28 @@
 
 
     </style>
+    <style>
+                /* 默认样式 */
+        #datawrapper-chart-B878o {
+            width: 100%; /* 让 iframe 宽度占满父容器 */
+            height: auto; /* 高度自动调整 */
+            min-height: 511px; /* 设置最小高度，避免内容被压缩 */
+        }
+
+        /* 手机端适配 */
+        @media (max-width: 768px) {
+            #datawrapper-chart-B878o {
+                min-height: 400px; /* 在手机上减小高度 */
+            }
+        }
+
+        /* 更小的设备（如 iPhone SE） */
+        @media (max-width: 480px) {
+            #datawrapper-chart-B878o {
+                min-height: 300px; /* 进一步减小高度 */
+            }
+        }
+    </style>
     
     <meta name='viewport' content='width=device-width, initial-scale=1'>
             <script src='https://kit.fontawesome.com/5087d62e1c.js' crossorigin='anonymous'></script>
@@ -269,7 +294,7 @@
         <a href="index.html">Data</a>
         <a href="reporting.html">Reporting</a>
         <a href="#">Audio & Video</a>
-        <a href="Yiren_Lu_Resume.pdf" download style="float:right">Resume</a>
+        <a href="Data-Lu,Yiren" download style="float:right">Resume</a>
     </div>
 
     <div class="row">
@@ -347,7 +372,7 @@
 
         <div class="rightcolumn">
             <div class="card">
-                <h2>About Me</h2>
+                <h2 class="right-column-heading">About Me</h2>
                     <img src="pictures/Profile.jpg" alt="Yiren Lu in Philly" height="200" style="max-width: 100%; height: auto;">
                 <p><b>Candidate @ Columbia Journalism School</b>
                     <br>
@@ -369,7 +394,7 @@
                 </p>
             </div>
             <div class="card">
-                <h2>Recent Activities.</h2>
+                <h2 class="right-column-heading">Recent Activities.</h2>
                 <p>
                     I just published my Team USA article! Check it out here: <a href="https://yiren54610.github.io/olympic_us/">Why the 2024 Paris Olympics Marked the Triumph of US Female Athletes</a>
                     
@@ -380,7 +405,7 @@
                 </p>
             </div>
             <div class="card">
-                <h2>Follow Me</h2>
+                <h2 class="right-column-heading">Follow Me</h2>
                 <p>
                     <span class="icon-text">
                         <span class="icon is-large">
@@ -414,7 +439,7 @@
     </div>
 
     <div class="footer">
-        <h2>Yiren Lu Class 2025</h2>
+        <h2>Yiren Lu Class of 2025</h2>
     </div>
 
 </body>
