@@ -1,736 +1,1001 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1093.52 600.91">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1005 600">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
         fill: #89bde1;
       }
 
-      .cls-2 {
+      .st3 {
         fill: #edb1db;
       }
 
-      .cls-3 {
+      .st4 {
         font-family: ArialMT, Arial;
       }
 
-      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+      .st4, .st5, .st6, .st7, .st8 {
         isolation: isolate;
       }
 
-      .cls-3, .cls-4, .cls-6 {
+      .st4, .st5, .st7 {
         font-size: 10px;
       }
 
-      .cls-8 {
+      .st9 {
         fill: #c3a2e1;
       }
 
-      .cls-9 {
+      .st10 {
         fill: #b8b2b2;
       }
 
-      .cls-10 {
+      .st11 {
         fill: #9cd09c;
       }
 
-      .cls-4 {
+      .st5 {
         font-family: Helvetica, Helvetica;
       }
 
-      .cls-6, .cls-7 {
+      .st7, .st8 {
         font-family: Arial-BoldMT, Arial;
         font-weight: 700;
       }
 
-      .cls-11 {
-        fill: #fff;
-      }
-
-      .cls-12 {
+      .st12 {
         fill: #efba8c;
       }
 
-      .cls-13 {
+      .st13 {
         fill: #e2e365;
       }
 
-      .cls-14 {
+      .st14 {
         fill: #75ccd5;
       }
 
-      .cls-15 {
+      .st15 {
         fill: #d5a196;
       }
 
-      .cls-16 {
-        letter-spacing: -.11em;
-      }
-
-      .cls-17 {
-        letter-spacing: -.02em;
-      }
-
-      .cls-18 {
-        letter-spacing: -.02em;
-      }
-
-      .cls-19 {
+      .st16 {
         fill: #f2a8aa;
       }
 
-      .cls-20 {
-        fill: none;
+      .st1 {
         stroke: #000;
       }
 
-      .cls-7 {
+      .st8 {
         font-size: 12px;
       }
     </style>
   </defs>
-  <rect id="background" class="cls-11" x="88.52" width="1005" height="600"/>
+  <rect id="background" class="st0" width="1005" height="600"/>
   <g id="viz">
-    <g id="_100_000_-_149_999" data-name="$100,000 - $149,999">
+    <g id="_100_000_-_149_999">
       <g>
         <g>
-          <rect id="_100_000_-_149_999_-_Beauty_and_Personal_Care" data-name="$100,000 - $149,999 - Beauty and Personal Care" class="cls-14" x="138.52" y="72.8" width="55.3" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Books" data-name="$100,000 - $149,999 - Books" class="cls-13" x="138.52" y="176.4" width="15.21" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Clothing_Shoes_and_Jewelry" data-name="$100,000 - $149,999 - Clothing, Shoes, and Jewelry" class="cls-9" x="138.52" y="98.7" width="61.33" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Electronics" data-name="$100,000 - $149,999 - Electronics" class="cls-2" x="138.52" y="46.9" width="134.13" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Food" data-name="$100,000 - $149,999 - Food" class="cls-15" x="138.52" y="124.6" width="30.68" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Home_and_Kitchen" data-name="$100,000 - $149,999 - Home and Kitchen" class="cls-8" x="138.52" y="21" width="161.8" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Office_Product" data-name="$100,000 - $149,999 - Office Product" class="cls-19" x="138.52" y="254.1" width="10.03" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Pet_Supplies" data-name="$100,000 - $149,999 - Pet Supplies" class="cls-10" x="138.52" y="150.5" width="18.95" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Sports_and_Outdoors" data-name="$100,000 - $149,999 - Sports and Outdoors" class="cls-12" x="138.52" y="202.3" width="13.31" height="24.9"/>
-          <rect id="_100_000_-_149_999_-_Toys_and_Games" data-name="$100,000 - $149,999 - Toys and Games" class="cls-1" x="138.52" y="228.2" width="13.84" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Beauty_and_Personal_Care" class="st14" x="50" y="72.8" width="55.3" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Books" class="st13" x="50" y="176.4" width="15.2" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Clothing_Shoes_and_Jewelry" class="st10" x="50" y="98.7" width="61.3" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Electronics" class="st3" x="50" y="46.9" width="134.1" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Food" class="st15" x="50" y="124.6" width="30.7" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Home_and_Kitchen" class="st9" x="50" y="21" width="161.8" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Office_Product" class="st16" x="50" y="254.1" width="10" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Pet_Supplies" class="st11" x="50" y="150.5" width="18.9" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Sports_and_Outdoors" class="st12" x="50" y="202.3" width="13.3" height="24.9"/>
+          <rect id="_100_000_-_149_999_-_Toys_and_Games" class="st2" x="50" y="228.2" width="13.8" height="24.9"/>
         </g>
         <g id="xAxis">
-          <path class="cls-20" d="M138.52,286v-6h208.33v6"/>
+          <path class="st1" d="M50,286v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="138.52" y1="280" x2="138.52" y2="286"/>
-            <text class="cls-4" transform="translate(135.74 296.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="50" y1="280" x2="50" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(47.2 296.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="168.28" y1="280" x2="168.28" y2="286"/>
-            <text class="cls-4" transform="translate(159.94 296.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="79.8" y1="280" x2="79.8" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(71.4 296.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="198.04" y1="280" x2="198.04" y2="286"/>
-            <text class="cls-4" transform="translate(185.53 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="109.5" y1="280" x2="109.5" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(97 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="227.8" y1="280" x2="227.8" y2="286"/>
-            <text class="cls-4" transform="translate(215.29 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="139.3" y1="280" x2="139.3" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(126.8 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="257.56" y1="280" x2="257.56" y2="286"/>
-            <text class="cls-4" transform="translate(245.05 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="169" y1="280" x2="169" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(156.5 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="287.33" y1="280" x2="287.33" y2="286"/>
-            <text class="cls-4" transform="translate(274.81 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="198.8" y1="280" x2="198.8" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(186.3 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="317.09" y1="280" x2="317.09" y2="286"/>
-            <text class="cls-4" transform="translate(304.58 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="228.6" y1="280" x2="228.6" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(216.1 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="346.85" y1="280" x2="346.85" y2="286"/>
-            <text class="cls-4" transform="translate(334.34 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="258.3" y1="280" x2="258.3" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(245.8 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
-          <text class="cls-6" transform="translate(296.29 275)"><tspan x="0" y="0">sum [sum]</tspan></text>
+          <g class="st6">
+            <text class="st7" transform="translate(207.8 275)"><tspan x="0" y="0">sum [sum]</tspan></text>
+          </g>
         </g>
         <g id="yAxis">
-          <path class="cls-20" d="M138.52,20v260"/>
+          <path class="st1" d="M50,20v260"/>
           <g>
-            <line class="cls-20" x1="138.52" y1="33.45" x2="132.52" y2="33.45"/>
-            <text class="cls-4" transform="translate(47.25 36.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="50" y1="33.5" x2="44" y2="33.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-41.3 36.6)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="59.35" x2="132.52" y2="59.35"/>
-            <text class="cls-4" transform="translate(80.61 62.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="50" y1="59.3" x2="44" y2="59.3"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-7.9 62.6)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="85.25" x2="132.52" y2="85.25"/>
-            <text class="cls-4" transform="translate(12.22 88.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="50" y1="85.2" x2="44" y2="85.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-76.3 88.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="111.15" x2="132.52" y2="111.15"/>
-            <text class="cls-4" transform="translate(0 114.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="50" y1="111.2" x2="44" y2="111.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-88.5 114.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="137.05" x2="132.52" y2="137.05"/>
-            <text class="cls-4" transform="translate(106.72 140.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="50" y1="137.1" x2="44" y2="137.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(18.2 140.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="162.95" x2="132.52" y2="162.95"/>
-            <text class="cls-4" transform="translate(73.37 166.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="50" y1="162.9" x2="44" y2="162.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-15.2 166.1)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="188.85" x2="132.52" y2="188.85"/>
-            <text class="cls-4" transform="translate(101.72 192.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="50" y1="188.9" x2="44" y2="188.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(13.2 192.1)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="214.75" x2="132.52" y2="214.75"/>
-            <text class="cls-4" transform="translate(37.24 217.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="50" y1="214.8" x2="44" y2="214.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-51.3 218)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="240.65" x2="132.52" y2="240.65"/>
-            <text class="cls-4" transform="translate(54.48 243.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="50" y1="240.6" x2="44" y2="240.6"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-34 243.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(-29 243.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="266.55" x2="132.52" y2="266.55"/>
-            <text class="cls-4" transform="translate(66.33 269.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="50" y1="266.5" x2="44" y2="266.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-22.2 269.7)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(-14.4 269.7)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(-11.8 269.7)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
-          <text class="cls-6" transform="translate(142.52 28.58)"><tspan x="0" y="0">New_Category</tspan></text>
+          <g class="st6">
+            <text class="st7" transform="translate(54 28.6)"><tspan x="0" y="0">New_Category</tspan></text>
+          </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(92.52 14.29)"><tspan x="0" y="0">$100,000 - $149,999</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(4 14.3)"><tspan x="0" y="0">$100,000 - $149,999</tspan></text>
+      </g>
     </g>
-    <g id="_150_000_or_more" data-name="$150,000 or more">
+    <g id="_150_000_or_more">
       <g>
         <g>
-          <rect id="_150_000_or_more_-_Beauty_and_Personal_Care" data-name="$150,000 or more - Beauty and Personal Care" class="cls-14" x="406.85" y="72.8" width="67.72" height="24.9"/>
-          <rect id="_150_000_or_more_-_Books" data-name="$150,000 or more - Books" class="cls-13" x="406.85" y="176.4" width="19.66" height="24.9"/>
-          <rect id="_150_000_or_more_-_Clothing_Shoes_and_Jewelry" data-name="$150,000 or more - Clothing, Shoes, and Jewelry" class="cls-9" x="406.85" y="98.7" width="62.64" height="24.9"/>
-          <rect id="_150_000_or_more_-_Electronics" data-name="$150,000 or more - Electronics" class="cls-2" x="406.85" y="46.9" width="145.32" height="24.9"/>
-          <rect id="_150_000_or_more_-_Food" data-name="$150,000 or more - Food" class="cls-15" x="406.85" y="124.6" width="41.66" height="24.9"/>
-          <rect id="_150_000_or_more_-_Home_and_Kitchen" data-name="$150,000 or more - Home and Kitchen" class="cls-8" x="406.85" y="21" width="199.41" height="24.9"/>
-          <rect id="_150_000_or_more_-_Office_Product" data-name="$150,000 or more - Office Product" class="cls-19" x="406.85" y="254.1" width="9.55" height="24.9"/>
-          <rect id="_150_000_or_more_-_Pet_Supplies" data-name="$150,000 or more - Pet Supplies" class="cls-10" x="406.85" y="150.5" width="19.86" height="24.9"/>
-          <rect id="_150_000_or_more_-_Sports_and_Outdoors" data-name="$150,000 or more - Sports and Outdoors" class="cls-12" x="406.85" y="202.3" width="19.61" height="24.9"/>
-          <rect id="_150_000_or_more_-_Toys_and_Games" data-name="$150,000 or more - Toys and Games" class="cls-1" x="406.85" y="228.2" width="16.48" height="24.9"/>
+          <rect id="_150_000_or_more_-_Beauty_and_Personal_Care" class="st14" x="318.3" y="72.8" width="67.7" height="24.9"/>
+          <rect id="_150_000_or_more_-_Books" class="st13" x="318.3" y="176.4" width="19.7" height="24.9"/>
+          <rect id="_150_000_or_more_-_Clothing_Shoes_and_Jewelry" class="st10" x="318.3" y="98.7" width="62.6" height="24.9"/>
+          <rect id="_150_000_or_more_-_Electronics" class="st3" x="318.3" y="46.9" width="145.3" height="24.9"/>
+          <rect id="_150_000_or_more_-_Food" class="st15" x="318.3" y="124.6" width="41.7" height="24.9"/>
+          <rect id="_150_000_or_more_-_Home_and_Kitchen" class="st9" x="318.3" y="21" width="199.4" height="24.9"/>
+          <rect id="_150_000_or_more_-_Office_Product" class="st16" x="318.3" y="254.1" width="9.5" height="24.9"/>
+          <rect id="_150_000_or_more_-_Pet_Supplies" class="st11" x="318.3" y="150.5" width="19.9" height="24.9"/>
+          <rect id="_150_000_or_more_-_Sports_and_Outdoors" class="st12" x="318.3" y="202.3" width="19.6" height="24.9"/>
+          <rect id="_150_000_or_more_-_Toys_and_Games" class="st2" x="318.3" y="228.2" width="16.5" height="24.9"/>
         </g>
-        <g id="xAxis-2" data-name="xAxis">
-          <path class="cls-20" d="M406.85,286v-6h208.33v6"/>
+        <g id="xAxis-2">
+          <path class="st1" d="M318.3,286v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="406.85" y1="280" x2="406.85" y2="286"/>
-            <text class="cls-4" transform="translate(404.07 296.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="318.3" y1="280" x2="318.3" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(315.6 296.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="436.61" y1="280" x2="436.61" y2="286"/>
-            <text class="cls-4" transform="translate(428.27 296.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="348.1" y1="280" x2="348.1" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(339.8 296.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="466.37" y1="280" x2="466.37" y2="286"/>
-            <text class="cls-4" transform="translate(453.86 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="377.8" y1="280" x2="377.8" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(365.3 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="496.14" y1="280" x2="496.14" y2="286"/>
-            <text class="cls-4" transform="translate(483.62 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="407.6" y1="280" x2="407.6" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(395.1 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="525.9" y1="280" x2="525.9" y2="286"/>
-            <text class="cls-4" transform="translate(513.39 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="437.4" y1="280" x2="437.4" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(424.9 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="555.66" y1="280" x2="555.66" y2="286"/>
-            <text class="cls-4" transform="translate(543.15 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="467.1" y1="280" x2="467.1" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(454.6 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="585.42" y1="280" x2="585.42" y2="286"/>
-            <text class="cls-4" transform="translate(572.91 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="496.9" y1="280" x2="496.9" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(484.4 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="615.18" y1="280" x2="615.18" y2="286"/>
-            <text class="cls-4" transform="translate(602.67 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="526.7" y1="280" x2="526.7" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(514.1 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
         </g>
-        <g id="yAxis-2" data-name="yAxis">
-          <path class="cls-20" d="M406.85,20v260"/>
+        <g id="yAxis-2">
+          <path class="st1" d="M318.3,20v260"/>
           <g>
-            <line class="cls-20" x1="406.85" y1="33.45" x2="400.85" y2="33.45"/>
-            <text class="cls-4" transform="translate(315.58 36.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="318.3" y1="33.5" x2="312.3" y2="33.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(227.1 36.6)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="59.35" x2="400.85" y2="59.35"/>
-            <text class="cls-4" transform="translate(348.94 62.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="318.3" y1="59.3" x2="312.3" y2="59.3"/>
+            <g class="st6">
+              <text class="st5" transform="translate(260.4 62.6)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="85.25" x2="400.85" y2="85.25"/>
-            <text class="cls-4" transform="translate(280.56 88.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="318.3" y1="85.2" x2="312.3" y2="85.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(192 88.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="111.15" x2="400.85" y2="111.15"/>
-            <text class="cls-4" transform="translate(268.33 114.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="318.3" y1="111.2" x2="312.3" y2="111.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(179.8 114.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="137.05" x2="400.85" y2="137.05"/>
-            <text class="cls-4" transform="translate(375.06 140.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="318.3" y1="137.1" x2="312.3" y2="137.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(286.5 140.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="162.95" x2="400.85" y2="162.95"/>
-            <text class="cls-4" transform="translate(341.7 166.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="318.3" y1="162.9" x2="312.3" y2="162.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(253.2 166.1)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="188.85" x2="400.85" y2="188.85"/>
-            <text class="cls-4" transform="translate(370.06 192.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="318.3" y1="188.9" x2="312.3" y2="188.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(281.5 192.1)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="214.75" x2="400.85" y2="214.75"/>
-            <text class="cls-4" transform="translate(305.57 217.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="318.3" y1="214.8" x2="312.3" y2="214.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(217.1 218)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="240.65" x2="400.85" y2="240.65"/>
-            <text class="cls-4" transform="translate(322.82 243.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="318.3" y1="240.6" x2="312.3" y2="240.6"/>
+            <g class="st6">
+              <text class="st5" transform="translate(234.3 243.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(239.3 243.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="266.55" x2="400.85" y2="266.55"/>
-            <text class="cls-4" transform="translate(334.67 269.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="318.3" y1="266.5" x2="312.3" y2="266.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(246.2 269.7)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(253.9 269.7)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(256.5 269.7)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(360.85 14.29)"><tspan x="0" y="0">$150,000 or more</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(272.3 14.3)"><tspan x="0" y="0">$150,000 or more</tspan></text>
+      </g>
     </g>
-    <g id="_25_000_-_49_999" data-name="$25,000 - $49,999">
+    <g id="_25_000_-_49_999">
       <g>
         <g>
-          <rect id="_25_000_-_49_999_-_Beauty_and_Personal_Care" data-name="$25,000 - $49,999 - Beauty and Personal Care" class="cls-14" x="675.18" y="72.8" width="37.9" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Books" data-name="$25,000 - $49,999 - Books" class="cls-13" x="675.18" y="176.4" width="11.22" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Clothing_Shoes_and_Jewelry" data-name="$25,000 - $49,999 - Clothing, Shoes, and Jewelry" class="cls-9" x="675.18" y="98.7" width="34.19" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Electronics" data-name="$25,000 - $49,999 - Electronics" class="cls-2" x="675.18" y="46.9" width="83.96" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Food" data-name="$25,000 - $49,999 - Food" class="cls-15" x="675.18" y="124.6" width="20.8" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Home_and_Kitchen" data-name="$25,000 - $49,999 - Home and Kitchen" class="cls-8" x="675.18" y="21" width="92.39" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Office_Product" data-name="$25,000 - $49,999 - Office Product" class="cls-19" x="675.18" y="254.1" width="5.64" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Pet_Supplies" data-name="$25,000 - $49,999 - Pet Supplies" class="cls-10" x="675.18" y="150.5" width="14.81" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Sports_and_Outdoors" data-name="$25,000 - $49,999 - Sports and Outdoors" class="cls-12" x="675.18" y="202.3" width="6.19" height="24.9"/>
-          <rect id="_25_000_-_49_999_-_Toys_and_Games" data-name="$25,000 - $49,999 - Toys and Games" class="cls-1" x="675.18" y="228.2" width="6.57" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Beauty_and_Personal_Care" class="st14" x="586.7" y="72.8" width="37.9" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Books" class="st13" x="586.7" y="176.4" width="11.2" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Clothing_Shoes_and_Jewelry" class="st10" x="586.7" y="98.7" width="34.2" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Electronics" class="st3" x="586.7" y="46.9" width="84" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Food" class="st15" x="586.7" y="124.6" width="20.8" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Home_and_Kitchen" class="st9" x="586.7" y="21" width="92.4" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Office_Product" class="st16" x="586.7" y="254.1" width="5.6" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Pet_Supplies" class="st11" x="586.7" y="150.5" width="14.8" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Sports_and_Outdoors" class="st12" x="586.7" y="202.3" width="6.2" height="24.9"/>
+          <rect id="_25_000_-_49_999_-_Toys_and_Games" class="st2" x="586.7" y="228.2" width="6.6" height="24.9"/>
         </g>
-        <g id="xAxis-3" data-name="xAxis">
-          <path class="cls-20" d="M675.18,286v-6h208.33v6"/>
+        <g id="xAxis-3">
+          <path class="st1" d="M586.7,286v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="675.18" y1="280" x2="675.18" y2="286"/>
-            <text class="cls-4" transform="translate(672.4 296.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="586.7" y1="280" x2="586.7" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(583.9 296.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="704.95" y1="280" x2="704.95" y2="286"/>
-            <text class="cls-4" transform="translate(696.6 296.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="616.4" y1="280" x2="616.4" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(608.1 296.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="734.71" y1="280" x2="734.71" y2="286"/>
-            <text class="cls-4" transform="translate(722.19 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="646.2" y1="280" x2="646.2" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(633.7 296.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="764.47" y1="280" x2="764.47" y2="286"/>
-            <text class="cls-4" transform="translate(751.96 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="675.9" y1="280" x2="675.9" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(663.4 296.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="794.23" y1="280" x2="794.23" y2="286"/>
-            <text class="cls-4" transform="translate(781.72 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="705.7" y1="280" x2="705.7" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(693.2 296.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="823.99" y1="280" x2="823.99" y2="286"/>
-            <text class="cls-4" transform="translate(811.48 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="735.5" y1="280" x2="735.5" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(723 296.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="853.75" y1="280" x2="853.75" y2="286"/>
-            <text class="cls-4" transform="translate(841.24 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="765.2" y1="280" x2="765.2" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(752.7 296.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="883.52" y1="280" x2="883.52" y2="286"/>
-            <text class="cls-4" transform="translate(871 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="795" y1="280" x2="795" y2="286"/>
+            <g class="st6">
+              <text class="st5" transform="translate(782.5 296.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
         </g>
-        <g id="yAxis-3" data-name="yAxis">
-          <path class="cls-20" d="M675.18,20v260"/>
+        <g id="yAxis-3">
+          <path class="st1" d="M586.7,20v260"/>
           <g>
-            <line class="cls-20" x1="675.18" y1="33.45" x2="669.18" y2="33.45"/>
-            <text class="cls-4" transform="translate(583.91 36.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="586.7" y1="33.5" x2="580.7" y2="33.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(495.4 36.6)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="59.35" x2="669.18" y2="59.35"/>
-            <text class="cls-4" transform="translate(617.28 62.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="586.7" y1="59.3" x2="580.7" y2="59.3"/>
+            <g class="st6">
+              <text class="st5" transform="translate(528.8 62.6)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="85.25" x2="669.18" y2="85.25"/>
-            <text class="cls-4" transform="translate(548.89 88.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="586.7" y1="85.2" x2="580.7" y2="85.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(460.4 88.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="111.15" x2="669.18" y2="111.15"/>
-            <text class="cls-4" transform="translate(536.67 114.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="586.7" y1="111.2" x2="580.7" y2="111.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(448.1 114.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="137.05" x2="669.18" y2="137.05"/>
-            <text class="cls-4" transform="translate(643.39 140.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="586.7" y1="137.1" x2="580.7" y2="137.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(554.9 140.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="162.95" x2="669.18" y2="162.95"/>
-            <text class="cls-4" transform="translate(610.04 166.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="586.7" y1="162.9" x2="580.7" y2="162.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(521.5 166.1)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="188.85" x2="669.18" y2="188.85"/>
-            <text class="cls-4" transform="translate(638.39 192.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="586.7" y1="188.9" x2="580.7" y2="188.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(549.9 192.1)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="214.75" x2="669.18" y2="214.75"/>
-            <text class="cls-4" transform="translate(573.91 217.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="586.7" y1="214.8" x2="580.7" y2="214.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(485.4 218)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="240.65" x2="669.18" y2="240.65"/>
-            <text class="cls-4" transform="translate(591.15 243.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="586.7" y1="240.6" x2="580.7" y2="240.6"/>
+            <g class="st6">
+              <text class="st5" transform="translate(502.6 243.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(507.6 243.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="266.55" x2="669.18" y2="266.55"/>
-            <text class="cls-4" transform="translate(603 269.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="586.7" y1="266.5" x2="580.7" y2="266.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(514.5 269.7)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(522.3 269.7)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(524.9 269.7)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(629.18 14.29)"><tspan x="0" y="0">$25,000 - $49,999</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(540.7 14.3)"><tspan x="0" y="0">$25,000 - $49,999</tspan></text>
+      </g>
     </g>
-    <g id="_50_000_-_74_999" data-name="$50,000 - $74,999">
+    <g id="_50_000_-_74_999">
       <g>
         <g>
-          <rect id="_50_000_-_74_999_-_Beauty_and_Personal_Care" data-name="$50,000 - $74,999 - Beauty and Personal Care" class="cls-14" x="138.52" y="372.8" width="45.52" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Books" data-name="$50,000 - $74,999 - Books" class="cls-13" x="138.52" y="476.4" width="11.86" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Clothing_Shoes_and_Jewelry" data-name="$50,000 - $74,999 - Clothing, Shoes, and Jewelry" class="cls-9" x="138.52" y="398.7" width="44.57" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Electronics" data-name="$50,000 - $74,999 - Electronics" class="cls-2" x="138.52" y="346.9" width="96.24" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Food" data-name="$50,000 - $74,999 - Food" class="cls-15" x="138.52" y="424.6" width="24.88" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Home_and_Kitchen" data-name="$50,000 - $74,999 - Home and Kitchen" class="cls-8" x="138.52" y="321" width="119.94" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Office_Product" data-name="$50,000 - $74,999 - Office Product" class="cls-19" x="138.52" y="554.1" width="5.62" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Pet_Supplies" data-name="$50,000 - $74,999 - Pet Supplies" class="cls-10" x="138.52" y="450.5" width="15.72" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Sports_and_Outdoors" data-name="$50,000 - $74,999 - Sports and Outdoors" class="cls-12" x="138.52" y="502.3" width="9.04" height="24.9"/>
-          <rect id="_50_000_-_74_999_-_Toys_and_Games" data-name="$50,000 - $74,999 - Toys and Games" class="cls-1" x="138.52" y="528.2" width="10.07" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Beauty_and_Personal_Care" class="st14" x="50" y="372.8" width="45.5" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Books" class="st13" x="50" y="476.4" width="11.9" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Clothing_Shoes_and_Jewelry" class="st10" x="50" y="398.7" width="44.6" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Electronics" class="st3" x="50" y="346.9" width="96.2" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Food" class="st15" x="50" y="424.6" width="24.9" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Home_and_Kitchen" class="st9" x="50" y="321" width="119.9" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Office_Product" class="st16" x="50" y="554.1" width="5.6" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Pet_Supplies" class="st11" x="50" y="450.5" width="15.7" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Sports_and_Outdoors" class="st12" x="50" y="502.3" width="9" height="24.9"/>
+          <rect id="_50_000_-_74_999_-_Toys_and_Games" class="st2" x="50" y="528.2" width="10.1" height="24.9"/>
         </g>
-        <g id="xAxis-4" data-name="xAxis">
-          <path class="cls-20" d="M138.52,586v-6h208.33v6"/>
+        <g id="xAxis-4">
+          <path class="st1" d="M50,586v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="138.52" y1="580" x2="138.52" y2="586"/>
-            <text class="cls-4" transform="translate(135.74 596.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="50" y1="580" x2="50" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(47.2 596.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="168.28" y1="580" x2="168.28" y2="586"/>
-            <text class="cls-4" transform="translate(159.94 596.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="79.8" y1="580" x2="79.8" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(71.4 596.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="198.04" y1="580" x2="198.04" y2="586"/>
-            <text class="cls-4" transform="translate(185.53 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="109.5" y1="580" x2="109.5" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(97 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="227.8" y1="580" x2="227.8" y2="586"/>
-            <text class="cls-4" transform="translate(215.29 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="139.3" y1="580" x2="139.3" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(126.8 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="257.56" y1="580" x2="257.56" y2="586"/>
-            <text class="cls-4" transform="translate(245.05 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="169" y1="580" x2="169" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(156.5 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="287.33" y1="580" x2="287.33" y2="586"/>
-            <text class="cls-4" transform="translate(274.81 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="198.8" y1="580" x2="198.8" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(186.3 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="317.09" y1="580" x2="317.09" y2="586"/>
-            <text class="cls-4" transform="translate(304.58 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="228.6" y1="580" x2="228.6" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(216.1 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="346.85" y1="580" x2="346.85" y2="586"/>
-            <text class="cls-4" transform="translate(334.34 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="258.3" y1="580" x2="258.3" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(245.8 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
         </g>
-        <g id="yAxis-4" data-name="yAxis">
-          <path class="cls-20" d="M138.52,320v260"/>
+        <g id="yAxis-4">
+          <path class="st1" d="M50,320v260"/>
           <g>
-            <line class="cls-20" x1="138.52" y1="333.45" x2="132.52" y2="333.45"/>
-            <text class="cls-4" transform="translate(47.25 336.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="50" y1="333.5" x2="44" y2="333.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-41.3 336.7)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="359.35" x2="132.52" y2="359.35"/>
-            <text class="cls-4" transform="translate(80.61 362.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="50" y1="359.4" x2="44" y2="359.4"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-7.9 362.5)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="385.25" x2="132.52" y2="385.25"/>
-            <text class="cls-4" transform="translate(12.22 388.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="50" y1="385.2" x2="44" y2="385.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-76.3 388.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="411.15" x2="132.52" y2="411.15"/>
-            <text class="cls-4" transform="translate(0 414.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="50" y1="411.1" x2="44" y2="411.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-88.5 414.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="437.05" x2="132.52" y2="437.05"/>
-            <text class="cls-4" transform="translate(106.72 440.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="50" y1="437" x2="44" y2="437"/>
+            <g class="st6">
+              <text class="st5" transform="translate(18.2 440.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="462.95" x2="132.52" y2="462.95"/>
-            <text class="cls-4" transform="translate(73.37 466.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="50" y1="463" x2="44" y2="463"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-15.2 466.2)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="488.85" x2="132.52" y2="488.85"/>
-            <text class="cls-4" transform="translate(101.72 492.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="50" y1="488.9" x2="44" y2="488.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(13.2 492)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="514.75" x2="132.52" y2="514.75"/>
-            <text class="cls-4" transform="translate(37.24 517.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="50" y1="514.8" x2="44" y2="514.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-51.3 518)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="540.65" x2="132.52" y2="540.65"/>
-            <text class="cls-4" transform="translate(54.48 543.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="50" y1="540.7" x2="44" y2="540.7"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-34 543.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(-29 543.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="138.52" y1="566.55" x2="132.52" y2="566.55"/>
-            <text class="cls-4" transform="translate(66.33 569.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="50" y1="566.5" x2="44" y2="566.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(-22.2 569.8)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(-14.4 569.8)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(-11.8 569.8)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(92.52 314.29)"><tspan x="0" y="0">$50,000 - $74,999</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(4 314.3)"><tspan x="0" y="0">$50,000 - $74,999</tspan></text>
+      </g>
     </g>
-    <g id="_75_000_-_99_999" data-name="$75,000 - $99,999">
+    <g id="_75_000_-_99_999">
       <g>
         <g>
-          <rect id="_75_000_-_99_999_-_Beauty_and_Personal_Care" data-name="$75,000 - $99,999 - Beauty and Personal Care" class="cls-14" x="406.85" y="372.8" width="51.6" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Books" data-name="$75,000 - $99,999 - Books" class="cls-13" x="406.85" y="476.4" width="15.04" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Clothing_Shoes_and_Jewelry" data-name="$75,000 - $99,999 - Clothing, Shoes, and Jewelry" class="cls-9" x="406.85" y="398.7" width="48.48" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Electronics" data-name="$75,000 - $99,999 - Electronics" class="cls-2" x="406.85" y="346.9" width="104.98" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Food" data-name="$75,000 - $99,999 - Food" class="cls-15" x="406.85" y="424.6" width="24.53" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Home_and_Kitchen" data-name="$75,000 - $99,999 - Home and Kitchen" class="cls-8" x="406.85" y="321" width="130.96" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Office_Product" data-name="$75,000 - $99,999 - Office Product" class="cls-19" x="406.85" y="554.1" width="7.5" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Pet_Supplies" data-name="$75,000 - $99,999 - Pet Supplies" class="cls-10" x="406.85" y="450.5" width="14.88" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Sports_and_Outdoors" data-name="$75,000 - $99,999 - Sports and Outdoors" class="cls-12" x="406.85" y="502.3" width="10.82" height="24.9"/>
-          <rect id="_75_000_-_99_999_-_Toys_and_Games" data-name="$75,000 - $99,999 - Toys and Games" class="cls-1" x="406.85" y="528.2" width="10.42" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Beauty_and_Personal_Care" class="st14" x="318.3" y="372.8" width="51.6" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Books" class="st13" x="318.3" y="476.4" width="15" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Clothing_Shoes_and_Jewelry" class="st10" x="318.3" y="398.7" width="48.5" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Electronics" class="st3" x="318.3" y="346.9" width="105" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Food" class="st15" x="318.3" y="424.6" width="24.5" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Home_and_Kitchen" class="st9" x="318.3" y="321" width="131" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Office_Product" class="st16" x="318.3" y="554.1" width="7.5" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Pet_Supplies" class="st11" x="318.3" y="450.5" width="14.9" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Sports_and_Outdoors" class="st12" x="318.3" y="502.3" width="10.8" height="24.9"/>
+          <rect id="_75_000_-_99_999_-_Toys_and_Games" class="st2" x="318.3" y="528.2" width="10.4" height="24.9"/>
         </g>
-        <g id="xAxis-5" data-name="xAxis">
-          <path class="cls-20" d="M406.85,586v-6h208.33v6"/>
+        <g id="xAxis-5">
+          <path class="st1" d="M318.3,586v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="406.85" y1="580" x2="406.85" y2="586"/>
-            <text class="cls-4" transform="translate(404.07 596.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="318.3" y1="580" x2="318.3" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(315.6 596.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="436.61" y1="580" x2="436.61" y2="586"/>
-            <text class="cls-4" transform="translate(428.27 596.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="348.1" y1="580" x2="348.1" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(339.8 596.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="466.37" y1="580" x2="466.37" y2="586"/>
-            <text class="cls-4" transform="translate(453.86 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="377.8" y1="580" x2="377.8" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(365.3 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="496.14" y1="580" x2="496.14" y2="586"/>
-            <text class="cls-4" transform="translate(483.62 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="407.6" y1="580" x2="407.6" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(395.1 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="525.9" y1="580" x2="525.9" y2="586"/>
-            <text class="cls-4" transform="translate(513.39 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="437.4" y1="580" x2="437.4" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(424.9 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="555.66" y1="580" x2="555.66" y2="586"/>
-            <text class="cls-4" transform="translate(543.15 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="467.1" y1="580" x2="467.1" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(454.6 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="585.42" y1="580" x2="585.42" y2="586"/>
-            <text class="cls-4" transform="translate(572.91 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="496.9" y1="580" x2="496.9" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(484.4 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="615.18" y1="580" x2="615.18" y2="586"/>
-            <text class="cls-4" transform="translate(602.67 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="526.7" y1="580" x2="526.7" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(514.1 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
         </g>
-        <g id="yAxis-5" data-name="yAxis">
-          <path class="cls-20" d="M406.85,320v260"/>
+        <g id="yAxis-5">
+          <path class="st1" d="M318.3,320v260"/>
           <g>
-            <line class="cls-20" x1="406.85" y1="333.45" x2="400.85" y2="333.45"/>
-            <text class="cls-4" transform="translate(315.58 336.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="318.3" y1="333.5" x2="312.3" y2="333.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(227.1 336.7)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="359.35" x2="400.85" y2="359.35"/>
-            <text class="cls-4" transform="translate(348.94 362.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="318.3" y1="359.4" x2="312.3" y2="359.4"/>
+            <g class="st6">
+              <text class="st5" transform="translate(260.4 362.5)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="385.25" x2="400.85" y2="385.25"/>
-            <text class="cls-4" transform="translate(280.56 388.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="318.3" y1="385.2" x2="312.3" y2="385.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(192 388.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="411.15" x2="400.85" y2="411.15"/>
-            <text class="cls-4" transform="translate(268.33 414.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="318.3" y1="411.1" x2="312.3" y2="411.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(179.8 414.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="437.05" x2="400.85" y2="437.05"/>
-            <text class="cls-4" transform="translate(375.06 440.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="318.3" y1="437" x2="312.3" y2="437"/>
+            <g class="st6">
+              <text class="st5" transform="translate(286.5 440.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="462.95" x2="400.85" y2="462.95"/>
-            <text class="cls-4" transform="translate(341.7 466.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="318.3" y1="463" x2="312.3" y2="463"/>
+            <g class="st6">
+              <text class="st5" transform="translate(253.2 466.2)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="488.85" x2="400.85" y2="488.85"/>
-            <text class="cls-4" transform="translate(370.06 492.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="318.3" y1="488.9" x2="312.3" y2="488.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(281.5 492)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="514.75" x2="400.85" y2="514.75"/>
-            <text class="cls-4" transform="translate(305.57 517.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="318.3" y1="514.8" x2="312.3" y2="514.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(217.1 518)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="540.65" x2="400.85" y2="540.65"/>
-            <text class="cls-4" transform="translate(322.82 543.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="318.3" y1="540.7" x2="312.3" y2="540.7"/>
+            <g class="st6">
+              <text class="st5" transform="translate(234.3 543.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(239.3 543.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="406.85" y1="566.55" x2="400.85" y2="566.55"/>
-            <text class="cls-4" transform="translate(334.67 569.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="318.3" y1="566.5" x2="312.3" y2="566.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(246.2 569.8)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(253.9 569.8)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(256.5 569.8)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(360.85 314.29)"><tspan x="0" y="0">$75,000 - $99,999</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(272.3 314.3)"><tspan x="0" y="0">$75,000 - $99,999</tspan></text>
+      </g>
     </g>
-    <g id="Less_than_25_000" data-name="Less than $25,000">
+    <g id="Less_than_25_000">
       <g>
         <g>
-          <rect id="Less_than_25_000_-_Beauty_and_Personal_Care" data-name="Less than $25,000 - Beauty and Personal Care" class="cls-14" x="675.18" y="372.8" width="31.97" height="24.9"/>
-          <rect id="Less_than_25_000_-_Books" data-name="Less than $25,000 - Books" class="cls-13" x="675.18" y="476.4" width="11.44" height="24.9"/>
-          <rect id="Less_than_25_000_-_Clothing_Shoes_and_Jewelry" data-name="Less than $25,000 - Clothing, Shoes, and Jewelry" class="cls-9" x="675.18" y="398.7" width="31.4" height="24.9"/>
-          <rect id="Less_than_25_000_-_Electronics" data-name="Less than $25,000 - Electronics" class="cls-2" x="675.18" y="346.9" width="75.59" height="24.9"/>
-          <rect id="Less_than_25_000_-_Food" data-name="Less than $25,000 - Food" class="cls-15" x="675.18" y="424.6" width="22.82" height="24.9"/>
-          <rect id="Less_than_25_000_-_Home_and_Kitchen" data-name="Less than $25,000 - Home and Kitchen" class="cls-8" x="675.18" y="321" width="75.58" height="24.9"/>
-          <rect id="Less_than_25_000_-_Office_Product" data-name="Less than $25,000 - Office Product" class="cls-19" x="675.18" y="554.1" width="4.77" height="24.9"/>
-          <rect id="Less_than_25_000_-_Pet_Supplies" data-name="Less than $25,000 - Pet Supplies" class="cls-10" x="675.18" y="450.5" width="11.73" height="24.9"/>
-          <rect id="Less_than_25_000_-_Sports_and_Outdoors" data-name="Less than $25,000 - Sports and Outdoors" class="cls-12" x="675.18" y="502.3" width="4.79" height="24.9"/>
-          <rect id="Less_than_25_000_-_Toys_and_Games" data-name="Less than $25,000 - Toys and Games" class="cls-1" x="675.18" y="528.2" width="6.23" height="24.9"/>
+          <rect id="Less_than_25_000_-_Beauty_and_Personal_Care" class="st14" x="586.7" y="372.8" width="32" height="24.9"/>
+          <rect id="Less_than_25_000_-_Books" class="st13" x="586.7" y="476.4" width="11.4" height="24.9"/>
+          <rect id="Less_than_25_000_-_Clothing_Shoes_and_Jewelry" class="st10" x="586.7" y="398.7" width="31.4" height="24.9"/>
+          <rect id="Less_than_25_000_-_Electronics" class="st3" x="586.7" y="346.9" width="75.6" height="24.9"/>
+          <rect id="Less_than_25_000_-_Food" class="st15" x="586.7" y="424.6" width="22.8" height="24.9"/>
+          <rect id="Less_than_25_000_-_Home_and_Kitchen" class="st9" x="586.7" y="321" width="75.6" height="24.9"/>
+          <rect id="Less_than_25_000_-_Office_Product" class="st16" x="586.7" y="554.1" width="4.8" height="24.9"/>
+          <rect id="Less_than_25_000_-_Pet_Supplies" class="st11" x="586.7" y="450.5" width="11.7" height="24.9"/>
+          <rect id="Less_than_25_000_-_Sports_and_Outdoors" class="st12" x="586.7" y="502.3" width="4.8" height="24.9"/>
+          <rect id="Less_than_25_000_-_Toys_and_Games" class="st2" x="586.7" y="528.2" width="6.2" height="24.9"/>
         </g>
-        <g id="xAxis-6" data-name="xAxis">
-          <path class="cls-20" d="M675.18,586v-6h208.33v6"/>
+        <g id="xAxis-6">
+          <path class="st1" d="M586.7,586v-6h208.3v6"/>
           <g>
-            <line class="cls-20" x1="675.18" y1="580" x2="675.18" y2="586"/>
-            <text class="cls-4" transform="translate(672.4 596.1)"><tspan x="0" y="0">0</tspan></text>
+            <line class="st1" x1="586.7" y1="580" x2="586.7" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(583.9 596.1)"><tspan x="0" y="0">0</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="704.95" y1="580" x2="704.95" y2="586"/>
-            <text class="cls-4" transform="translate(696.6 596.1)"><tspan x="0" y="0">500</tspan></text>
+            <line class="st1" x1="616.4" y1="580" x2="616.4" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(608.1 596.1)"><tspan x="0" y="0">500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="734.71" y1="580" x2="734.71" y2="586"/>
-            <text class="cls-4" transform="translate(722.19 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            <line class="st1" x1="646.2" y1="580" x2="646.2" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(633.7 596.1)"><tspan x="0" y="0">1,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="764.47" y1="580" x2="764.47" y2="586"/>
-            <text class="cls-4" transform="translate(751.96 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            <line class="st1" x1="675.9" y1="580" x2="675.9" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(663.4 596.1)"><tspan x="0" y="0">1,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="794.23" y1="580" x2="794.23" y2="586"/>
-            <text class="cls-4" transform="translate(781.72 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            <line class="st1" x1="705.7" y1="580" x2="705.7" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(693.2 596.1)"><tspan x="0" y="0">2,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="823.99" y1="580" x2="823.99" y2="586"/>
-            <text class="cls-4" transform="translate(811.48 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            <line class="st1" x1="735.5" y1="580" x2="735.5" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(723 596.1)"><tspan x="0" y="0">2,500</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="853.75" y1="580" x2="853.75" y2="586"/>
-            <text class="cls-4" transform="translate(841.24 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            <line class="st1" x1="765.2" y1="580" x2="765.2" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(752.7 596.1)"><tspan x="0" y="0">3,000</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="883.52" y1="580" x2="883.52" y2="586"/>
-            <text class="cls-4" transform="translate(871 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            <line class="st1" x1="795" y1="580" x2="795" y2="586"/>
+            <g class="st6">
+              <text class="st5" transform="translate(782.5 596.1)"><tspan x="0" y="0">3,500</tspan></text>
+            </g>
           </g>
         </g>
-        <g id="yAxis-6" data-name="yAxis">
-          <path class="cls-20" d="M675.18,320v260"/>
+        <g id="yAxis-6">
+          <path class="st1" d="M586.7,320v260"/>
           <g>
-            <line class="cls-20" x1="675.18" y1="333.45" x2="669.18" y2="333.45"/>
-            <text class="cls-4" transform="translate(583.91 336.65)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            <line class="st1" x1="586.7" y1="333.5" x2="580.7" y2="333.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(495.4 336.7)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="359.35" x2="669.18" y2="359.35"/>
-            <text class="cls-4" transform="translate(617.28 362.55)"><tspan x="0" y="0">Electronics</tspan></text>
+            <line class="st1" x1="586.7" y1="359.4" x2="580.7" y2="359.4"/>
+            <g class="st6">
+              <text class="st5" transform="translate(528.8 362.5)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="385.25" x2="669.18" y2="385.25"/>
-            <text class="cls-4" transform="translate(548.89 388.45)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            <line class="st1" x1="586.7" y1="385.2" x2="580.7" y2="385.2"/>
+            <g class="st6">
+              <text class="st5" transform="translate(460.4 388.5)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="411.15" x2="669.18" y2="411.15"/>
-            <text class="cls-4" transform="translate(536.67 414.35)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            <line class="st1" x1="586.7" y1="411.1" x2="580.7" y2="411.1"/>
+            <g class="st6">
+              <text class="st5" transform="translate(448.1 414.3)"><tspan x="0" y="0">Clothing, Shoes, and Jewelry</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="437.05" x2="669.18" y2="437.05"/>
-            <text class="cls-4" transform="translate(643.39 440.25)"><tspan x="0" y="0">Food</tspan></text>
+            <line class="st1" x1="586.7" y1="437" x2="580.7" y2="437"/>
+            <g class="st6">
+              <text class="st5" transform="translate(554.9 440.2)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="462.95" x2="669.18" y2="462.95"/>
-            <text class="cls-4" transform="translate(610.04 466.15)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            <line class="st1" x1="586.7" y1="463" x2="580.7" y2="463"/>
+            <g class="st6">
+              <text class="st5" transform="translate(521.5 466.2)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="488.85" x2="669.18" y2="488.85"/>
-            <text class="cls-4" transform="translate(638.39 492.05)"><tspan x="0" y="0">Books</tspan></text>
+            <line class="st1" x1="586.7" y1="488.9" x2="580.7" y2="488.9"/>
+            <g class="st6">
+              <text class="st5" transform="translate(549.9 492)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="514.75" x2="669.18" y2="514.75"/>
-            <text class="cls-4" transform="translate(573.91 517.95)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            <line class="st1" x1="586.7" y1="514.8" x2="580.7" y2="514.8"/>
+            <g class="st6">
+              <text class="st5" transform="translate(485.4 518)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="540.65" x2="669.18" y2="540.65"/>
-            <text class="cls-4" transform="translate(591.15 543.85)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+            <line class="st1" x1="586.7" y1="540.7" x2="580.7" y2="540.7"/>
+            <g class="st6">
+              <text class="st5" transform="translate(502.6 543.8)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st5" transform="translate(507.6 543.8)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
           <g>
-            <line class="cls-20" x1="675.18" y1="566.55" x2="669.18" y2="566.55"/>
-            <text class="cls-4" transform="translate(603 569.75)"><tspan x="0" y="0">O</tspan><tspan class="cls-18" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+            <line class="st1" x1="586.7" y1="566.5" x2="580.7" y2="566.5"/>
+            <g class="st6">
+              <text class="st5" transform="translate(514.5 569.8)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st5" transform="translate(522.3 569.8)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st5" transform="translate(524.9 569.8)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <text class="cls-7" transform="translate(629.18 314.29)"><tspan x="0" y="0">Less than $25,000</tspan></text>
+      <g class="st6">
+        <text class="st8" transform="translate(540.7 314.3)"><tspan x="0" y="0">Less than $25,000</tspan></text>
+      </g>
     </g>
   </g>
   <g id="legend">
     <g>
       <g>
         <g>
-          <rect class="cls-14" x="898.52" y="35.5" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 48)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+          <rect class="st14" x="810" y="35.5" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 48)"><tspan x="0" y="0">Beauty and Personal Care</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-13" x="898.52" y="56" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 68.5)"><tspan x="0" y="0">Books</tspan></text>
+          <rect class="st13" x="810" y="56" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 68.5)"><tspan x="0" y="0">Books</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-9" x="898.52" y="76.5" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 89)"><tspan x="0" y="0">Clothing, Shoes, and</tspan></text>
-            <text class="cls-3" transform="translate(918.52 101)"><tspan x="0" y="0">Jewelry</tspan></text>
+          <rect class="st10" x="810" y="76.5" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 89)"><tspan x="0" y="0">Clothing, Shoes, and</tspan></text>
+            </g>
+            <g class="st6">
+              <text class="st4" transform="translate(830 101)"><tspan x="0" y="0">Jewelry</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-2" x="898.52" y="112.6" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 125.1)"><tspan x="0" y="0">Electronics</tspan></text>
+          <rect class="st3" x="810" y="112.6" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 125.1)"><tspan x="0" y="0">Electronics</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-15" x="898.52" y="133.1" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 145.6)"><tspan x="0" y="0">Food</tspan></text>
+          <rect class="st15" x="810" y="133.1" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 145.6)"><tspan x="0" y="0">Food</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-8" x="898.52" y="153.6" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 166.1)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+          <rect class="st9" x="810" y="153.6" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 166.1)"><tspan x="0" y="0">Home and Kitchen</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-19" x="898.52" y="174.1" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 186.6)"><tspan x="0" y="0">O</tspan><tspan class="cls-17" x="7.78" y="0">f</tspan><tspan x="10.38" y="0">fice Product</tspan></text>
+          <rect class="st16" x="810" y="174.1" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 186.6)"><tspan x="0" y="0">O</tspan></text>
+              <text class="st4" transform="translate(837.8 186.6)"><tspan x="0" y="0">f</tspan></text>
+              <text class="st4" transform="translate(840.4 186.6)"><tspan x="0" y="0">fice Product</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-10" x="898.52" y="194.6" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 207.1)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+          <rect class="st11" x="810" y="194.6" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 207.1)"><tspan x="0" y="0">Pet Supplies</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-12" x="898.52" y="215.1" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 227.6)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+          <rect class="st12" x="810" y="215.1" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 227.6)"><tspan x="0" y="0">Sports and Outdoors</tspan></text>
+            </g>
           </g>
         </g>
         <g>
-          <rect class="cls-1" x="898.52" y="235.6" width="15" height="15"/>
-          <g class="cls-5">
-            <text class="cls-3" transform="translate(918.52 248.1)"><tspan class="cls-16" x="0" y="0">T</tspan><tspan x="5" y="0">oys and Games</tspan></text>
+          <rect class="st2" x="810" y="235.6" width="15" height="15"/>
+          <g class="st6">
+            <g class="st6">
+              <text class="st4" transform="translate(830 248.1)"><tspan x="0" y="0">T</tspan></text>
+              <text class="st4" transform="translate(835 248.1)"><tspan x="0" y="0">oys and Games</tspan></text>
+            </g>
           </g>
         </g>
       </g>
-      <g class="cls-5">
-        <text class="cls-7" transform="translate(898.52 20)"><tspan x="0" y="0">New_Category</tspan></text>
+      <g class="st6">
+        <g class="st6">
+          <text class="st8" transform="translate(810 20)"><tspan x="0" y="0">New_Category</tspan></text>
+        </g>
       </g>
     </g>
   </g>
