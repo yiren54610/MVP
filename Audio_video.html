@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporting - Yiren Lu's Website</title>
+    <style>
+        .sigmar-regular {
+            font-family: "Sigmar", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pt-serif-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pt-serif-bold {
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .pt-serif-regular-italic {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .pt-serif-bold-italic {
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PT Serif", serif;
+            padding: 0;
+            background: linear-gradient(30deg, #bfd8d8 30%, #a8c0c0 100%);
+            margin-top: 60px;
+            margin-left: 0;
+        }
+
+        /* Header */
+        .header {
+            padding: 30px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            height: auto;
+            background-color: rgba(221, 221, 221, 0.5);
+            border-bottom: 0;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            color: #4e4e4e;
+            font-family: 'PT Serif', sans-serif;
+            margin: 0;
+        }
+
+        /* Navigation */
+        .topnav {
+            display: flex;
+            overflow: hidden;
+            z-index: 2;
+            position: fixed;
+            top: 110px;
+            width: 100%;
+            font-family: 'PT Serif', sans-serif;
+            background-color: rgba(221, 221, 221, 0.5);
+            border-bottom: 2px solid #4e4e4e;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #4e4e4e;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .topnav a:hover {
+            background-color: #f5f5f5;
+            color: #3498db;
+        }
+
+        .topnav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: #3498db;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .topnav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 20px;
+            margin-top: 160px; /* Adjust based on header and nav height */
+            margin-bottom: 80px; /* Space for footer */
+        }
+
+        /* Video Card */
+        .video-card {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .video-column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .text-column {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .card-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 24px;
+            font-family: 'PT Serif', sans-serif;
+        }
+
+        .card-description {
+            color: #3d3d3d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(221, 221, 221, 0.5);
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .video-card {
+                flex-direction: column;
+            }
+            
+            .video-column, .text-column {
+                flex: none;
+                width: 100%;
+            }
+            
+            .main-content {
+                margin-top: 140px; /* Adjust for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Welcome to Yiren Lu's Website</h1>
+    </header>
+
+    <nav class="topnav">
+        <a href="index.html">Data</a>
+        <a href="reporting.html">Reporting</a>
+        <a href="Audio_video.html">Audio & Video</a>
+        <a href="Yiren_Lu_Resume.pdf" style="float:right">Resume</a>
+    </nav>
+
+    <div class="main-content">
+        <!-- Video Card 1 -->
+        <div class="video-card">
+            <div class="video-column">
+                <div class="video-container">
+                    <!-- Replace with your video iframe -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7dTj7JGZc34?si=XUGtIQE9vzDz9efg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="text-column">
+                <h2 class="card-title">Dialogue With Celine Bassman</h2>
+                <p class="card-description">
+                    This short documentary, created during my time at Wesleyan University, 
+                    captures an intimate conversation with Celine Bassman, a student choreographer, 
+                    as she unveils the heart of her capstone project. The film traces the arc of creation— 
+                    from raw inspiration to the breathtaking final stage.
+                    <br>
+                    <br>
+                    Produced by Yiren Lu
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Video Card 2 -->
+        <div class="video-card">
+            <div class="video-column">
+                <div class="video-container">
+                    <!-- Replace with your video iframe -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X4WPG-1wN2c?si=-BGvvIcBhm8UC3FG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="text-column">
+                <h2 class="card-title">With Sonia--Find The Moon</h2>
+                <p class="card-description">
+                    Sonia Guan is a playwright and songwriter who spent a year collaborating with friends on a musical project. 
+                    This piece reflects her creative journey. 
+                    The video was made to celebrate her graduation and dedication.
+                    <br>
+                    <br>
+                    Produced by Yiren Lu
+                </p>
+        </div>
+
+        <!-- Add more video cards as needed -->
+    </div>
+
+    <footer class="footer">
+        <h2>Yiren Lu Class of 2025</h2>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.onscroll = function() {
+            var header = document.querySelector('.header');
+            var sticky = header.offsetTop;
+
+            if (window.pageYOffset > sticky) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        };
+
+        // Sticky Footer
+        window.onscroll = function() {
+            var footer = document.querySelector('.footer');
+            var docHeight = document.body.scrollHeight;
+            var winHeight = window.innerHeight;
+            var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (docHeight - (scrollPos + winHeight) < 50) {
+                footer.classList.add('sticky');
+            } else {
+                footer.classList.remove('sticky');
+            }
+        };
+
+        window.onload = function() {
+            var footer = document.querySelector('.footer');
+            var docHeight = document.body.scrollHeight;
+            var winHeight = window.innerHeight;
+
+            if (docHeight <= winHeight) {
+                footer.classList.add('sticky');
+            }
+        };
+    </script>
+</body>
+</html>
