@@ -147,6 +147,7 @@
             border-radius: 12px;
             height: 650px; /* Keep the original card height */
             position: relative;
+            overflow: hidden; /* Added to contain all content */
         }
 
         .card:hover {
@@ -187,6 +188,7 @@
             display: inline-block;
             line-height: 1.4;
             font-family: 'PT Serif', sans-serif;
+            font-size: 1.3em; /* Added for better responsive sizing */
         }
 
         h2:after {
@@ -233,12 +235,39 @@
             .col:nth-child(2n) {
                 margin-right: 0; /* Remove margin for the last card in a row */
             }
+            
+            .card {
+                height: auto; /* Make cards flexible in height */
+                min-height: 650px; /* Set a minimum height */
+            }
+            
+            .iframe-container {
+                height: 300px; /* Reduce height on smaller screens */
+            }
+            
+            h2 {
+                font-size: 1.2em; /* Reduce heading size */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .iframe-container {
+                height: 250px; /* Further reduce height on very small screens */
+            }
         }
 
         @media screen and (max-width: 400px) {
             .col {
                 flex: 1 1 100%; /* One column on very small screens */
                 margin-right: 0; /* No margin for single column */
+            }
+            
+            .iframe-container {
+                height: 200px; /* Smallest height for mobile */
+            }
+            
+            h2 {
+                font-size: 1.1em; /* Smallest heading size */
             }
         }
     </style>
@@ -269,7 +298,7 @@
                     <a href="http://theuptowner.org/anti-vaccine-demonstrators-spread-false-conspiracy-theories-at-harlem-rally/" 
                        target="_blank" 
                        style="text-decoration: none; color: inherit;">
-                        Anti-vaxxers Call Process of Vaccination “Invasive” and “Profit-Making” by Big Pharmas in Harlem Rally
+                        Anti-vaxxers Call Process of Vaccination "Invasive" and "Profit-Making" by Big Pharmas in Harlem Rally
                     </a>
                 </h2>
                 <p>Yiren Lu, Rashi Mishra</p>
