@@ -1,823 +1,436 @@
-
-<!doctype html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US" >
-<style> 
-/* Modified columns for 3 cards per row */
-.leftcolumn {
-    float: left;
-    width: 95%;  /* Increased width to accommodate 3 cards with spacing */
-    padding-left: 20px;
-    padding-right: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));  /* Equal width columns with minimum width of 0 */
-    gap: 30px;  /* Increased spacing between cards */
-    margin: 0 auto;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.8); /* 80% opacity */
-    padding: 15px;  /* Slightly reduced padding for smaller cards */
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in width calculation */
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive breakpoints */
-@media screen and (max-width: 1200px) {
-    .leftcolumn {
-        grid-template-columns: 1fr 1fr;  /* 2 columns for medium screens */
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .leftcolumn {
-        grid-template-columns: 1fr;  /* 1 column for small screens */
-        width: 100%;
-        padding: 0 15px;
-    }
-}
-
-.iframe-container {
-    width: 100%;
-    height: 250px;  /* Reduced height for smaller cards */
-    border: none;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.iframe-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    color: #2c3e50;
-    margin-bottom: 12px;  /* Reduced margin for smaller cards */
-    font-weight: 600;
-    transition: transform 0.2s ease;
-    position: relative;
-    display: inline-block;
-    line-height: 1.3;  /* Slightly reduced line height */
-    font-family: "PT Serif", serif;
-    font-size: 1.4rem;  /* Slightly smaller heading for smaller cards */
-}
-
-h2:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #3498db;
-    transition: width 0.3s ease;
-}
-
-h2:hover:after {
-    width: 100%;
-}
-
-h2:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tag {
-    display: inline-block;
-    font-size: 0.8rem;  /* Smaller font size for tags */
-    font-weight: 500;
-    padding: 3px 8px;  /* Smaller padding for tags */
-    border-radius: 999px;
-    margin: 3px;
-    text-transform: capitalize;
-    white-space: nowrap;
-    color: white;
-}
-
-.tag[data-skill="Python"] {
-    background-color: #3776AB;
-}
-
-.tag[data-skill="RStudio"] {
-    background-color: #75AADB;
-}
-
-.tag[data-skill="GGplot"] {
-    background-color: #db75b6;
-}
-
-.tag[data-skill="Webscraping"] {
-    background-color: #F59E0B;
-}
-
-.tag[data-skill="BeautifulSoup"] {
-    background-color: #4CAF50;
-}
-
-.tag[data-skill="Playwright"] {
-    background-color: darkkhaki;
-}
-
-.tag[data-skill="API"] {
-    background-color: coral;
-}
-
-.tag[data-skill="Mapping"] {
-    background-color: lightpink;
-}
-
-.tag[data-skill="HTML"] {
-    background-color: orchid;
-}
-
-.tag[data-skill="RAWGraphs"] {
-    background-color: navajowhite;
-}
-
-.tag[data-skill="Illustrator"] {
-    background-color: olivedrab;
-}
-
-.tag[data-skill="QGIS"] {
-    background-color: orangered;
-}
-
-p {
-    color: #3d3d3d;
-    line-height: 1.5;  /* Slightly reduced line height */
-    margin: 0;
-    padding-bottom: 1em;  /* Reduced padding */
-    font-size: 0.95rem;  /* Slightly smaller text */
-}
-
-.icon-text {
-    display: inline-block;
-    font-size: 1.8em;  /* Smaller icons */
-    color: rgba(221, 221, 221, 0.5);
-}
-
-.content {
-    max-width: 100%;  /* Allow content to fill the card */
-    margin: 0 auto;
-    text-align: left;
-}
-
-.image-container {
-    width: 100%;
-    height: 200px;  /* Reduced height for smaller cards */
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block;
-}
-
-.image-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-  <!-- This is Squarespace. --><!-- hriggins -->
-<base href="">
-<meta charset="utf-8" />
-<title>Yiren Lu</title>
-<meta http-equiv="Accept-CH" content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" /><link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
-<link rel="canonical" href="https://hriggins.squarespace.com"/>
-<meta property="og:site_name" content="Yiren Lu"/>
-<meta property="og:title" content="Yiren Lu"/>
-<meta property="og:url" content="https://hriggins.squarespace.com"/>
-<meta property="og:type" content="website"/>
-<meta itemprop="name" content="Yiren Lu"/>
-<meta itemprop="url" content="https://hriggins.squarespace.com"/>
-<meta name="twitter:title" content="Yiren Lu"/>
-<meta name="twitter:url" content="https://hriggins.squarespace.com"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="description" content="" />
-<link rel="preconnect" href="https://images.squarespace-cdn.com">
-<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-<link rel="preconnect" href="https://p.typekit.net" crossorigin>
-<script type="text/javascript" src="//use.typekit.net/ik/7qZmQ-oIYYOOeEz0QAIpupwE0Ml5cHypkKy9Mvuvmi3feT3IfFHN4UJLFRbh52jhWDm8Z2IDZRquZcscFAIkwQyKjQIuFDsq5snbMKG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0-Y4TZhiTd1w0SaBujW48Sagyjh90jhNlOfG0SaBujW48SagyjhmDjhy8ZYmC-Ao1OcFzdPUyjamTiY8Djhy8ZYmC-Ao1OcFzdPUyjamTiY8Djhy8ZYmC-Ao1Oco8ifUySkolZPUGSc81Zh80SkoDSWmyScmDSeBRZPoRdhXCdeNRjAUGdaFXOYFUiABkZWF3jAF8ShFGZAsude80ZkoRdhXCiaiaOcBRiA8XpWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1Oco8ifUaiaS0jWw0dA9CiaiaOcyk-Ai1-AoDO1FUiABkZWF3jAF8OcFzdPUaiaS0SaBujW48SagyjhmDjhy8ZYmC-Ao1OcFzdPJwSY4zpe8ljPu0daZyJ68ciWsuScIlSYb7fbKnMsMMeMI6MKG4f5J7IMMjMkMfH6qJn3IbMg6IJMJ7fbKOMsMMeMS6MKG4f5w7IMMj2PMfH6qJRMIbMg6sJMJ7fbKemsMgeMw6MKG4fJsmIMIjgfMfH6qJ6m9bMs6YJMJ7fbK2msMgeMX6MKG4fJmmIMIj2KMfH6qJ689bMs6sJMHbMd22NzjB.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script type="text/javascript" crossorigin="anonymous" defer="true" nomodule="nomodule" src="//assets.squarespace.com/@sqs/polyfiller/1.6/legacy.js"></script>
-<script type="text/javascript" crossorigin="anonymous" defer="true" src="//assets.squarespace.com/@sqs/polyfiller/1.6/modern.js"></script>
-<script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
-<script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-2f967bd93ca1e6a2-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_runtime');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-runtime-2f967bd93ca1e6a2-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-b60fc53b12f6d6c5-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-extract_css_moment_js_vendor');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/extract-css-moment-js-vendor-b60fc53b12f6d6c5-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-8f9b90a6d3c1a6ae-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-cldr_resource_pack');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-8f9b90a6d3c1a6ae-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-63aa6a8a011f7ecd-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors_stable');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-63aa6a8a011f7ecd-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-vendors-e3821afb8a4d5260-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-e3821afb8a4d5260-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/common-80570260ee2a7d33-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/common-80570260ee2a7d33-min.en-US.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//assets.squarespace.com/universal/scripts-compressed/performance-ee11b07fc00a153c-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-performance');</script>
-<script crossorigin="anonymous" src="//assets.squarespace.com/universal/scripts-compressed/performance-ee11b07fc00a153c-min.en-US.js" defer ></script><script data-name="static-context">Static = window.Static || {}; Static.SQUARESPACE_CONTEXT = {"betaFeatureFlags":["campaigns_thumbnail_layout","order_status_page_checkout_landing_enabled","campaigns_merch_state","campaigns_import_discounts","campaigns_new_image_layout_picker","i18n_beta_website_locales","campaigns_discount_section_in_blasts","campaigns_discount_section_in_automations","contacts_and_campaigns_redesign","section-sdk-product-pages","marketing_automations","marketing_landing_page"],"facebookAppId":"314192535267336","facebookApiVersion":"v6.0","rollups":{"squarespace-announcement-bar":{"js":"//assets.squarespace.com/universal/scripts-compressed/announcement-bar-8003bc62e0073df6-min.en-US.js"},"squarespace-audio-player":{"css":"//assets.squarespace.com/universal/styles-compressed/audio-player-5d864aadea1060d1-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/audio-player-3cd3d7d5985a9870-min.en-US.js"},"squarespace-blog-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/blog-collection-list-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/blog-collection-list-770996818a620a62-min.en-US.js"},"squarespace-calendar-block-renderer":{"css":"//assets.squarespace.com/universal/styles-compressed/calendar-block-renderer-b72d08ba4421f5a0-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/calendar-block-renderer-f17cd4b30170c5f4-min.en-US.js"},"squarespace-chartjs-helpers":{"css":"//assets.squarespace.com/universal/styles-compressed/chartjs-helpers-96b256171ee039c1-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/chartjs-helpers-2142d2f8231d73c4-min.en-US.js"},"squarespace-comments":{"css":"//assets.squarespace.com/universal/styles-compressed/comments-884caa2347b9eaf3-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/comments-124b2da01b70266d-min.en-US.js"},"squarespace-custom-css-popup":{"css":"//assets.squarespace.com/universal/styles-compressed/custom-css-popup-492a7334763c4678-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/custom-css-popup-ce3a5b1183b139bb-min.en-US.js"},"squarespace-dialog":{"css":"//assets.squarespace.com/universal/styles-compressed/dialog-6ad3397bb3743468-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/dialog-30f3096f9da3ca7e-min.en-US.js"},"squarespace-events-collection":{"css":"//assets.squarespace.com/universal/styles-compressed/events-collection-b72d08ba4421f5a0-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/events-collection-4128d59c3574eadb-min.en-US.js"},"squarespace-form-rendering-utils":{"js":"//assets.squarespace.com/universal/scripts-compressed/form-rendering-utils-67509f8fb002f6f8-min.en-US.js"},"squarespace-forms":{"css":"//assets.squarespace.com/universal/styles-compressed/forms-0afd3c6ac30bbab1-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/forms-deafd5a150731210-min.en-US.js"},"squarespace-gallery-collection-list":{"css":"//assets.squarespace.com/universal/styles-compressed/gallery-collection-list-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/gallery-collection-list-91bf179640922449-min.en-US.js"},"squarespace-image-zoom":{"css":"//assets.squarespace.com/universal/styles-compressed/image-zoom-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/image-zoom-60f9abd094f76732-min.en-US.js"},"squarespace-pinterest":{"css":"//assets.squarespace.com/universal/styles-compressed/pinterest-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/pinterest-24f1f90a47091f94-min.en-US.js"},"squarespace-popup-overlay":{"css":"//assets.squarespace.com/universal/styles-compressed/popup-overlay-b742b752f5880972-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/popup-overlay-99c7040f5523f75f-min.en-US.js"},"squarespace-product-quick-view":{"css":"//assets.squarespace.com/universal/styles-compressed/product-quick-view-0ba5bac716923b8e-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/product-quick-view-265fed3ad0494ca9-min.en-US.js"},"squarespace-products-collection-item-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-item-v2-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-item-v2-6d4891a84922348b-min.en-US.js"},"squarespace-products-collection-list-v2":{"css":"//assets.squarespace.com/universal/styles-compressed/products-collection-list-v2-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/products-collection-list-v2-dc2433d1c2d992d5-min.en-US.js"},"squarespace-search-page":{"css":"//assets.squarespace.com/universal/styles-compressed/search-page-90a67fc09b9b32c6-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/search-page-05e0b385b1e98610-min.en-US.js"},"squarespace-search-preview":{"js":"//assets.squarespace.com/universal/scripts-compressed/search-preview-80e42752b6c4df56-min.en-US.js"},"squarespace-simple-liking":{"css":"//assets.squarespace.com/universal/styles-compressed/simple-liking-701bf8bbc05ec6aa-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/simple-liking-0ce9c692006369a3-min.en-US.js"},"squarespace-social-buttons":{"css":"//assets.squarespace.com/universal/styles-compressed/social-buttons-95032e5fa98e47a5-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/social-buttons-d49e30eaf5bd9640-min.en-US.js"},"squarespace-tourdates":{"css":"//assets.squarespace.com/universal/styles-compressed/tourdates-b4046463b72f34e2-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/tourdates-cefd2a072aff5c4f-min.en-US.js"},"squarespace-website-overlays-manager":{"css":"//assets.squarespace.com/universal/styles-compressed/website-overlays-manager-07ea5a4e004e6710-min.en-US.css","js":"//assets.squarespace.com/universal/scripts-compressed/website-overlays-manager-0fe154df485a6a6e-min.en-US.js"}},"pageType":2,"website":{"id":"5ed13f95fdf5a218ba1574d9","identifier":"hriggins","websiteType":1,"contentModifiedOn":1713995375871,"cloneable":false,"hasBeenCloneable":false,"siteStatus":{},"language":"en-US","timeZone":"America/Los_Angeles","machineTimeZoneOffset":-25200000,"timeZoneOffset":-25200000,"timeZoneAbbr":"PDT","siteTitle":"Yiren Lu","fullSiteTitle":"Yiren Lu","siteTagLine":"","siteDescription":"","shareButtonOptions":{"4":true,"7":true,"8":true,"1":true,"2":true,"6":true,"3":true},"authenticUrl":"https://hriggins.squarespace.com","internalUrl":"https://hriggins.squarespace.com","baseUrl":"https://hriggins.squarespace.com","sslSetting":3,"isHstsEnabled":false,"socialAccounts":[{"serviceId":64,"screenname":"Instagram","addedOn":1590773661862,"profileUrl":"https://www.instagram.com/williamxavierhurst/","iconEnabled":true,"serviceName":"instagram-unauth"},{"serviceId":20,"userId":"herschel.riggins@gmail.com","screenname":"herschel.riggins@gmail.com","addedOn":1590773675627,"profileUrl":"mailto:herschel.riggins@gmail.com","iconEnabled":true,"serviceName":"email"}],"typekitId":"","statsMigrated":false,"imageMetadataProcessingEnabled":false,"screenshotId":"6a881895a9fe5012f2310c91ea682201fb29d96b8e541707efdb552e59e12b61","captchaSettings":{"enabledForDonations":false},"showOwnerLogin":false},"websiteSettings":{"id":"5ed13f95fdf5a218ba1574db","websiteId":"5ed13f95fdf5a218ba1574d9","subjects":[],"country":"US","state":"OR","simpleLikingEnabled":true,"popupOverlaySettings":{"style":1,"enabledPages":[]},"commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","commentsEnabled":false,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"expressCheckout":false,"continueShoppingLinkUrl":"/","useLightCart":false,"showNoteField":false,"shippingCountryDefaultValue":"US","billToShippingDefaultValue":false,"showShippingPhoneNumber":true,"isShippingPhoneRequired":false,"showBillingPhoneNumber":true,"isBillingPhoneRequired":false,"currenciesSupported":["USD","CAD","GBP","AUD","EUR","CHF","NOK","SEK","DKK","NZD","SGD","MXN","HKD","CZK","ILS","MYR","RUB","PHP","PLN","THB","BRL","ARS","COP","IDR","INR","JPY","ZAR"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"showCustomCheckoutForm":false,"checkoutPageMarketingOptInEnabled":false,"enableMailingListOptInByDefault":false,"sameAsRetailLocation":false,"merchandisingSettings":{"scarcityEnabledOnProductItems":false,"scarcityEnabledOnProductBlocks":false,"scarcityMessageType":"DEFAULT_SCARCITY_MESSAGE","scarcityThreshold":10,"multipleQuantityAllowedForServices":true,"restockNotificationsEnabled":false,"restockNotificationsSuccessText":"","restockNotificationsMailingListSignUpEnabled":false,"relatedProductsEnabled":false,"relatedProductsOrdering":"random","soldOutVariantsDropdownDisabled":false,"productComposerOptedIn":false,"productComposerABTestOptedOut":false,"productReviewsEnabled":false,"displayImportedProductReviewsEnabled":false,"hasOptedToCollectNativeReviews":false},"minimumOrderSubtotalEnabled":false,"isLive":false,"multipleQuantityAllowedForServices":true},"useEscapeKeyToLogin":true,"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1,"pinterestOverlayOptions":{"mode":"disabled"},"userAccountsSettings":{"loginAllowed":false,"signupAllowed":false}},"cookieSettings":{"isCookieBannerEnabled":false,"isRestrictiveCookiePolicyEnabled":false,"cookieBannerText":"","cookieBannerTheme":"","cookieBannerVariant":"","cookieBannerPosition":"","cookieBannerCtaVariant":"","cookieBannerCtaText":"","cookieBannerAcceptType":"OPT_IN","cookieBannerOptOutCtaText":"","cookieBannerHasOptOut":false,"cookieBannerHasManageCookies":true,"cookieBannerManageCookiesLabel":"","cookieBannerSavedPreferencesText":"","cookieBannerSavedPreferencesLayout":"PILL"},"websiteCloneable":false,"collection":{"title":"About","id":"5edd8f6e9ae1433b3ac5c872","fullUrl":"/","type":10,"permissionType":1},"subscribed":false,"appDomain":"squarespace.com","templateTweakable":true,"tweakJSON":{"TGutter":"3%","TMaxWidth":"400","TPerRow":"3","gallery-auto-play":"false","galleryPlaySpeed":"3","hide-thumbnail-titles":"false","outerPadding":"75px","pagePadding":"50px","product-gallery-auto-crop":"false","product-image-auto-crop":"true","thumbnail-layout":"Basic Grid","topPadding":"10px","tweak-v1-related-products-title-spacing":"50px"},"templateId":"4fd11f32c4aad9b01c9e624c","templateVersion":"7","pageFeatures":[1,2,4],"gmRenderKey":"QUl6YVN5Q0JUUk9xNkx1dkZfSUUxcjQ2LVQ0QWVUU1YtMGQ3bXk4","templateScriptsRootUrl":"https://static1.squarespace.com/static/ta/4fd1028ee4b02be53c65dfb3/1361/scripts/","impersonatedSession":false,"tzData":{"zones":[[-480,"US","P%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}},"showAnnouncementBar":false,"recaptchaEnterpriseContext":{"recaptchaEnterpriseSiteKey":"6LdDFQwjAAAAAPigEvvPgEVbb7QBm-TkVJdDTlAv"},"i18nContext":{"timeZoneData":{"id":"America/Los_Angeles","name":"Pacific Time"}},"env":"PRODUCTION"};</script><script type="module">Squarespace.load(window);</script>
-<script data-sqs-type="imageloader-bootstrapper" type="module">if(window.ImageLoader) window.ImageLoader.bootstrap({}, document);</script>
-<script type="module">Squarespace.afterBodyLoad(Y);</script>
-<script type="application/ld+json">{"url":"https://hriggins.squarespace.com","name":"Yiren Lu","description":"","@context":"http://schema.org","@type":"WebSite"}</script><link rel="stylesheet" type="text/css" href="https://static1.squarespace.com/static/sitecss/5ed13f95fdf5a218ba1574d9/52/4fd11f32c4aad9b01c9e624c/5ed13f95fdf5a218ba1574f3/1361/site.css"/><script>Static.COOKIE_BANNER_CAPABLE = true;</script>
-<!-- End of Squarespace Headers -->
-</head>
-
-<body class="blog-sidebar-display-auto index-thumb-title-position-below index-item-layout-auto thumbnail-layout-basic-grid thumbnails-on-open-page-show-all   layout-style-left page-borders-none underline-body-links gallery-page-controls-tiny-thumbnails  social-icon-style-normal   show-category-navigation   event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link    product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing tweak-v1-related-products-image-aspect-ratio-11-square tweak-v1-related-products-details-alignment-center newsletter-style-dark hide-opentable-icons opentable-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-center image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-5edd8f6e9ae1433b3ac5c872 collection-type-page collection-layout-default homepage mobile-style-available site-title has-primary-nav" id="collection-5edd8f6e9ae1433b3ac5c872">
-
-  <div id="canvas">
-
-      
-  <div id="mobileNav" class="">
-    <div id="mobileNavWrapper" class="wrapper">
-      <nav class="main-nav mobileNav">
-        <ul>
-          
-
-            
-              <li class="page-collection active-link">
-                
-                  <a href="https://yiren54610.github.io/MVP/">DATA</a>
-                
-                
-              </li>
-            
-
-          
-
-            
-              <li class="page-collection">
-                
-                  <a href="media.html">Audio&Video</a>
-                
-                
-              </li>
-
-              <li class="page-collection">
-                
-                <a href="Data-Lu,Yiren.pdf" download style="float:right">RESUME</a>
-              
-              
-            </li>
-            
-
-          
-          
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div id="mobileMenuLink"><a>Menu</a></div>
-
-
-
-    <header id="header">
-      <div id="logo" data-content-field="site-title">
-        
-        <h1 class="logo"><a href="/">Yiren Lu</a></h1>
-        
-        
-      </div>
-      <script type="module">
-        Y.use('squarespace-ui-base', function(Y) {
-          Y.all("#header .logo, #header .logo-subtitle").each(function (text) {
-            text.plug(Y.Squarespace.TextShrink, {
-              parentEl: Y.one('#header'),
-              triggerWidth: 750
-            });
-          });
-        });
-
-        // Show spinner on page load if loading bookmarked url
-        if (window.location.hash && window.location.hash !== '#') {
-          document.querySelector('body').className += ' index-loading';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiren Lu - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+/* New header styles */
+        .name-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: none;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 999;
         }
-      </script>
-      <div id="topNav" data-content-field="navigation">
-<nav class="main-nav">
-  <ul>
-  
-  
-
-      <li class="page-collection active-link">
+        
+        .name-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        /* Adjust topNav position to account for new header */
+        #topNav {
+            position: fixed;
+            top: 60px; /* Increased to account for name header */
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+        }
+        
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .main-nav li {
+            margin: 0;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        /* Adjust container to account for fixed nav and header */
+        .container {
+            margin-top: 140px; /* Increased to account for both header and nav */
+        }
 
         
-
-          
-            <a href="https://yiren54610.github.io/MVP/">DATA</a>
-          
-
-          
-
-
+        .active-link a {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
         
 
-      </li>
+        /* Keep all your existing styles below exactly as they are */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-  
+        /* Profile Section Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-      <li class="page-collection">
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-        
+        .profile {
+            display: flex;
+            align-items: center;
+            background-color: none;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
 
-          
-            <a href="media.html">Audio & Video</a>
-          
+        .profile-image {
+            max-width: 250px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-          
+        .profile-content h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
 
+        .profile-content p {
+            color: #3d3d3d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
 
-        
+        /* Social Links Styles */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-      </li>
+        .social-links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: transform 0.3s ease;
+        }
 
-      <li class="page-collection">
-                
-        <a href="Data-Lu,Yiren.pdf" download style="float:right">RESUME</a>
-      
-      
-    </li>
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
 
-  
-  
-  
-  </ul>
-</nav>
-</div>
+        .social-links svg {
+            margin-right: 8px;
+        }
 
-    </header>
+        /* Project Grid Styles */
+        .leftcolumn {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            width: 100%;
+            padding: 0 20px;
+        }
 
-    <div class="page-divider"></div>
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
 
-    <div class="extra-wrapper page-header">
-      <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Header Content: About" data-type="block-field" id="page-header-5edd8f6e9ae1433b3ac5c872"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .card h2 a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        .card h2:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .card h2:hover:after {
+            width: 100%;
+        }
+
+        .card p {
+            color: #3d3d3d;
+            line-height: 1.5;
+            margin: 0;
+            padding-bottom: 1em;
+            font-size: 0.95rem;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 999px;
+            margin: 3px;
+            text-transform: capitalize;
+            white-space: nowrap;
+            color: white;
+        }
+
+        .tag[data-skill="Python"] { background-color: #3776AB; }
+        .tag[data-skill="RStudio"] { background-color: #75AADB; }
+        .tag[data-skill="GGplot"] { background-color: #db75b6; }
+        .tag[data-skill="Webscraping"] { background-color: #F59E0B; }
+        .tag[data-skill="BeautifulSoup"] { background-color: #4CAF50; }
+        .tag[data-skill="Playwright"] { background-color: darkkhaki; }
+        .tag[data-skill="API"] { background-color: coral; }
+        .tag[data-skill="Mapping"] { background-color: lightpink; }
+        .tag[data-skill="HTML"] { background-color: orchid; }
+        .tag[data-skill="RAWGraphs"] { background-color: navajowhite; }
+        .tag[data-skill="Illustrator"] { background-color: olivedrab; }
+        .tag[data-skill="QGIS"] { background-color: orangered; }
+
+        /* Responsive Breakpoints */
+        @media screen and (max-width: 1200px) {
+            .leftcolumn {
+                grid-template-columns: 1fr 1fr;
+            }
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .leftcolumn {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="topNav" data-content-field="navigation">
+        <nav class="main-nav">
+            <ul>
+                <li class="page-collection active-link">
+                    <a href="https://yiren54610.github.io/MVP/">DATA</a>
+                </li>
+                <li class="page-collection">  
+                    <a href="media.html">Audio & Video</a>
+                </li>
+                <li class="page-collection">            
+                    <a href="Data-Lu,Yiren.pdf" download>RESUME</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
-    <section id="page" role="main" data-content-field="main-content">
-      <!-- CATEGORY NAV -->
-      
-      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1591924730221" id="page-5edd8f6e9ae1433b3ac5c872"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="row sqs-row"><div class="col sqs-col-7 span-7"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-aa195b5d287474dc119d"><div class="sqs-block-content">
 
-<div class="sqs-html-content">
-  <h1 style="white-space:pre-wrap;">About</h1><p class="" style="white-space:pre-wrap;">
-    Hi there! Welcome to my website. This is the garden of my inner world. I was an anthropologist with a background in statistics before transitioning into journalism, so I explore the human world through a quantitative lens. Interested in visual storytelling and data viz.
-    </p>
-    <p class="" style="white-space:pre-wrap;">
-      Feel free to contact me!
-    </strong></p>
-
-
-    <div id="socialLinks" class="social-links sqs-svg-icon--list" data-content-field="connected-accounts">
-          
-
-
-      <a href="https://www.instagram.com/lindadada666/" target="_blank" class="sqs-svg-icon--wrapper instagram-unauth">
-        <div>
-          <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-            <use class="sqs-use--icon" xlink:href="#instagram-unauth-icon"></use>
-            <use class="sqs-use--mask" xlink:href="#instagram-unauth-mask"></use>
-          </svg>
-        </div>
-      </a>
-    
-      <a href="mailto:yl5732@columbia.edu" target="_blank" class="sqs-svg-icon--wrapper email">
-        <div>
-          <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-            <use class="sqs-use--icon" xlink:href="#email-icon"></use>
-            <use class="sqs-use--mask" xlink:href="#email-mask"></use>
-          </svg>
-        </div>
-      </a>
-
-      <a href="https://www.linkedin.com/in/yiren-lu-777295237/" target="_blank" class="sqs-svg-icon--wrapper linkedin">
-        <div>
-          <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-            <use class="sqs-use--icon" xlink:href="#linkedin-icon"></use>
-            <use class="sqs-use--mask" xlink:href="#linkedin-mask"></use>
-          </svg>
-        </div>
-      </a>
-
-      <!-- GitHub Icon -->
-      <a href="https://github.com/yiren54610" target="_blank" class="sqs-svg-icon--wrapper github">
-        <div>
-          <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-            <use class="sqs-use--icon" xlink:href="#github-icon"></use>
-            <use class="sqs-use--mask" xlink:href="#github-mask"></use>
-          </svg>
-        </div>
-      </a>
-      
-      
-      
-    
-    
-    </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div></div></div><div class="col sqs-col-5 span-5"><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="80.53830227743272" data-block-type="5" id="block-yui_3_17_2_1_1591651368347_19095"><div class="sqs-block-content">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-    
-  
-    <div
-        class="
-          image-block-outer-wrapper
-          layout-caption-hidden
-          design-layout-inline
-          combination-animation-none
-          individual-animation-none
-          individual-text-animation-none
-        "
-        data-test="image-block-inline-outer-wrapper"
-    >
-
-      
-
-      
-        <figure
-            class="
-              sqs-block-image-figure
-              intrinsic
-            "
-            style="max-width:596px;"
-        >
-          
-        
-        
-
-        
-          
-            
-          <div
-              
-              
-              class="image-block-wrapper"
-              data-animation-role="image"
-              
-  
-
-          >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:80.53829956054688%;
-                
-                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
-              "
-              >
-                
-                
-                
-                
-                
-                
-                
-              <img src="pictures/Profile.jpg" alt="Profile Picture" width="596" height="593" style="display:block; object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%;">
-
-
+    <div class="container">
+        <section class="profile">
+            <img src="pictures/Profile.jpg" alt="Yiren Lu - Profile Picture" class="profile-image" loading="lazy">
+            <div class="profile-content">
+                <h1>About Me</h1>
+                <p>Hi there! This is Yiren Lu. Welcome to my website. This is the garden of my inner world. I was an anthropologist with a background in statistics before transitioning into journalism, so I explore the human world through a quantitative lens. Interested in visual storytelling and data viz.</p>
+                <p>Feel free to contact me!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lindadada666/" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="mailto:yl5732@columbia.edu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/yiren-lu-777295237/" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/yiren54610" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
             </div>
-          </div>
-        
-          
-        
+        </section>
 
-        
-      
-        </figure>
-      
-
-    </div>
-  
-
-
-  
-
-
-</div></div></div></div><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-db66954240a0c567b6f9"><div class="sqs-block-content">&nbsp;</div></div><div class="sqs-block gallery-block sqs-block-gallery" data-aspect-ratio="20.166666666666668" data-block-json="&#123;&quot;methodOption&quot;:&quot;transient&quot;,&quot;existingGallery&quot;:null,&quot;newWindow&quot;:false,&quot;active-alignment&quot;:&quot;left&quot;,&quot;aspectRatio&quot;:20.166666666666668,&quot;auto-crop&quot;:true,&quot;autoplay&quot;:true,&quot;autoplay-duration&quot;:7,&quot;blockAnimation&quot;:&quot;none&quot;,&quot;collectionId&quot;:&quot;5edd8f6e9ae1433b3ac5c85f&quot;,&quot;controls&quot;:true,&quot;design&quot;:&quot;slider&quot;,&quot;show-meta&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-only-description&quot;:false,&quot;square-thumbs&quot;:true,&quot;vSize&quot;:null,&quot;transientGalleryId&quot;:&quot;5edd8f6e9ae1433b3ac5c85f&quot;&#125;" data-block-type="8" id="block-a6b045c1780240e6faf4"><div class="sqs-block-content">
-
-
-
-<div class="
-  sqs-gallery-container
-  sqs-gallery-block-slider
-  
-  
-  sqs-gallery-has-controls
-  
-
-  
-    
-    
-  
-  sqs-gallery-block-show-meta
-  
-  
-
-  
-  
-
-  
-  block-animation-none
-  clear"
-  
-  
->
-    <div class="sqs-gallery">
-
-      <div class="row">
         <div class="leftcolumn">
-          <div class="card">
-            <h2>
-                <a href="https://yiren54610.github.io/project_5/" target="_blank" style="text-decoration: none; color: inherit;">
-                    How Tall Are They?
-                </a>
-            </h2>
-            <p>Gender representation in animation, movies, 
-              and TV shows has long been a central concern among critics of popular culture. 
-              This story takes a data-driven approach to the conversation by analyzing the most beloved characters on MyAnimeList.
-            </p>
-            <div class="content" style="text-align: left;">
-                <img alt="Beeswarm Charts of Height Distribution" src="pictures/beeswarm-laptop.png" class="image-container">
-            </div>
-            <span class="tag" data-skill="Python">Python</span>
-            <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-            <span class="tag" data-skill="Playwright">Playwright</span>
-            <span class="tag" data-skill="RStudio">RStudio</span>
-            <span class="tag" data-skill="Illustrator">Illustrator</span>
-        </div>
-
-
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/trash_story/" target="_blank" style="text-decoration: none; color: inherit;">
-                        California's Zero-Waste Dream Meets a Landfill Nightmare
-                    </a>
-                </h2>
-                <p>California has long been troubled by its trash issues. 
-                    The state has signed a series of bills aiming for a zero-waste plan in the coming decades. 
-                    But beyond the millions of tons of waste that go to recycling or composting, landfills remain a long-term problem. 
-                </p>
-                <div class="content" style="text-align: left;">
-                    <img alt="trump_biden_comparison" src="pictures/header_landfills.jpg" class="image-container">
+                <h2><a href="https://yiren54610.github.io/project_5/" target="_blank" rel="noopener noreferrer">How Tall Are They?</a></h2>
+                <p>Gender representation in animation, movies, and TV shows has long been a central concern among critics of popular culture. This story takes a data-driven approach to the conversation by analyzing the most beloved characters on MyAnimeList.</p>
+                <img src="pictures/beeswarm-laptop.png" alt="Beeswarm Charts of Height Distribution" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                    <span class="tag" data-skill="Playwright">Playwright</span>
+                    <span class="tag" data-skill="RStudio">RStudio</span>
+                    <span class="tag" data-skill="Illustrator">Illustrator</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="QGIS">QGIS</span>
-                <span class="tag" data-skill="Mapping">Mapping</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
-                <span class="tag" data-skill="Illustrator">Illustrator</span>
             </div>
 
-
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/ECI-and-DPI/" target="_blank" style="text-decoration: none; color: inherit;">
-                        Post-COVID Reality: Income Rises But Pessimism Continues
-                    </a>
-                </h2>
-                <p>Real Icome VS Economic Confidence index
-                    <br>
-                    Comparing real disposable income and economic confidence index during Trump's last administration and Biden's administration.
-                </p>
-                <div class="content" style="text-align: left;">
-                    <img alt="trump_biden_comparison" src="pictures/In_one_chart.png" class="image-container">
+                <h2><a href="https://yiren54610.github.io/trash_story/" target="_blank" rel="noopener noreferrer">California's Zero-Waste Dream Meets a Landfill Nightmare</a></h2>
+                <p>California has long been troubled by its trash issues. The state has signed a series of bills aiming for a zero-waste plan in the coming decades. But beyond the millions of tons of waste that go to recycling or composting, landfills remain a long-term problem.</p>
+                <img src="pictures/header_landfills.jpg" alt="California Landfills Visualization" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="QGIS">QGIS</span>
+                    <span class="tag" data-skill="Mapping">Mapping</span>
+                    <span class="tag" data-skill="RStudio">RStudio</span>
+                    <span class="tag" data-skill="Illustrator">Illustrator</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="GGplot">GGplot</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
             </div>
 
-
-
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Bigfoot/" target="_blank" style="text-decoration: none; color: inherit;">
-                        What's Standing Between Us and Proof of Bigfoot?
-                    </a>
-                </h2>
-                <p>Use mapping tools to visualize the caveats</p>
-                <div class="content" style="text-align: left;">
-                    <iframe title="" aria-label="Map" id="datawrapper-chart-MRACJ" src="https://datawrapper.dwcdn.net/MRACJ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="419" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
-                    </script>
+                <h2><a href="https://yiren54610.github.io/ECI-and-DPI/" target="_blank" rel="noopener noreferrer">Post-COVID Reality: Income Rises But Pessimism Continues</a></h2>
+                <p>Real Income VS Economic Confidence index. Comparing real disposable income and economic confidence index during Trump's last administration and Biden's administration.</p>
+                <img src="pictures/In_one_chart.png" alt="Income and Economic Confidence Chart" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="GGplot">GGplot</span>
+                    <span class="tag" data-skill="RStudio">RStudio</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
-                <span class="tag" data-skill="API">API</span>
-                <span class="tag" data-skill="Mapping">Mapping</span>
             </div>
 
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/olympic_us/" target="_blank" style="text-decoration: none; color: inherit;">
-                        Why the 2024 Paris Olympics Marked the Triumph of US Female Athletes
-                    </a>
-                </h2>
+                <h2><a href="https://yiren54610.github.io/Bigfoot/" target="_blank" rel="noopener noreferrer">What's Standing Between Us and Proof of Bigfoot?</a></h2>
+                <p>Use mapping tools to visualize the caveats in Bigfoot research and sightings.</p>
+                <img src="pictures/Bigfoot_map_preview.jpg" alt="Bigfoot Sightings Map" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                    <span class="tag" data-skill="Webscraping">Webscraping</span>
+                    <span class="tag" data-skill="API">API</span>
+                    <span class="tag" data-skill="Mapping">Mapping</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><a href="https://yiren54610.github.io/olympic_us/" target="_blank" rel="noopener noreferrer">Why the 2024 Paris Olympics Marked the Triumph of US Female Athletes</a></h2>
                 <p>Comparing percentages of medals obtained, average medal counts per person, and total numbers.</p>
-                <div class="content" style="text-align: left;">
-                    <img alt="Olympics_all_medal scatter plots preview" src="pictures/team.png" class="image-container">
+                <img src="pictures/team.png" alt="Olympics Medal Scatter Plots" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                    <span class="tag" data-skill="Webscraping">Webscraping</span>
+                    <span class="tag" data-skill="RStudio">RStudio</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
             </div>
 
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Amazon/" target="_blank" style="text-decoration: none; color: inherit;">
-                        What are richer people buying online?
-                    </a>
-                </h2>
+                <h2><a href="https://yiren54610.github.io/Amazon/" target="_blank" rel="noopener noreferrer">What are Richer People Buying Online?</a></h2>
                 <p>An analysis of over a million purchases on Amazon.</p>
-                <div class="content" style="text-align: left;">
-                    <img alt="chart showing people's expenditures on different categories" src="pictures/bar_chart.svg" class="image-container">
+                <img src="pictures/bar_chart.svg" alt="Amazon Purchases Expenditure Chart" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="Illustrator">Illustrator</span>
+                    <span class="tag" data-skill="HTML">HTML</span>
+                    <span class="tag" data-skill="RAWGraphs">RAWGraphs</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="Illustrator">Illustrator</span>
-                <span class="tag" data-skill="HTML">HTML</span>
-                <span class="tag" data-skill="RAWGraphs">RAWGraphs</span>
             </div>
 
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Map_Final/" target="_blank" style="text-decoration: none; color: inherit;">BBC Movie Menu</a>
-                </h2>
-                <p>This is an interactive map that is based upon BBC's 100 movie critics' recommendation.</p>
-                <div class="content" style="text-align: left;">
-                  <img alt="BBC Movie Menu" src="pictures/BBC_Movies.jpg" class="image-container">
+                <h2><a href="https://yiren54610.github.io/Map_Final/" target="_blank" rel="noopener noreferrer">BBC Movie Menu</a></h2>
+                <p>An interactive map based on BBC's 100 movie critics' recommendations.</p>
+                <img src="pictures/BBC_Movies.jpg" alt="BBC Movies Interactive Map" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                    <span class="tag" data-skill="Webscraping">Webscraping</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
             </div>
 
             <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Foundation_final/" target="_blank" style="text-decoration: none; color: inherit;">Popular Color Tracking</a>
-                </h2>
-                <p>This is a website that tracks emerging color trends</p>
-                <div class="content" style="text-align: left;">
-                  <img alt="Color palettes" src="pictures/colors.jpg" class="image-container">
+                <h2><a href="https://yiren54610.github.io/Foundation_final/" target="_blank" rel="noopener noreferrer">Popular Color Tracking</a></h2>
+                <p>A website that tracks emerging color trends.</p>
+                <img src="pictures/colors.jpg" alt="Color Trends Visualization" class="image-container" loading="lazy">
+                <div class="project-tags">
+                    <span class="tag" data-skill="Python">Python</span>
+                    <span class="tag" data-skill="Playwright">Playwright</span>
                 </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="Playwright">Playwright</span>
             </div>
-
-            
         </div>
-
-  
-  
-
-</div>
-
-
-
-
-
-
-  
-  
-
-</div></div></div></div></div>
-    </section>
-
-    <div class="extra-wrapper page-footer">
-      <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="Footer Content: About" data-type="block-field" id="page-footer-5edd8f6e9ae1433b3ac5c872"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
     </div>
-
-    <div class="page-divider"></div>
-
-    <footer id="footer">
-      <div class="sqs-layout sqs-grid-1 columns-1 empty" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1591644324253" id="footerBlock"><div class="row sqs-row"><div class="col sqs-col-1 span-1"></div></div></div>
-      
-
-      
-    </footer>
-
-  </div>
-
-  <div></div>
-
-  <script defer="true" src="https://static1.squarespace.com/static/ta/4fd1028ee4b02be53c65dfb3/1361/scripts/site-bundle.js" type="text/javascript"></script>
-
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg"><symbol id="instagram-unauth-icon" viewBox="0 0 64 64"><path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"/></symbol><symbol id="instagram-unauth-mask" viewBox="0 0 64 64"><path d="M43.693,23.153c-0.272-0.7-0.597-1.2-1.122-1.725c-0.525-0.525-1.025-0.85-1.725-1.122c-0.529-0.205-1.323-0.45-2.785-0.517c-1.582-0.072-2.056-0.087-6.061-0.087s-4.48,0.015-6.061,0.087c-1.462,0.067-2.257,0.311-2.785,0.517c-0.7,0.272-1.2,0.597-1.725,1.122c-0.525,0.525-0.85,1.025-1.122,1.725c-0.205,0.529-0.45,1.323-0.516,2.785c-0.072,1.582-0.087,2.056-0.087,6.061s0.015,4.48,0.087,6.061c0.067,1.462,0.311,2.257,0.516,2.785c0.272,0.7,0.597,1.2,1.122,1.725s1.025,0.85,1.725,1.122c0.529,0.205,1.323,0.45,2.785,0.516c1.581,0.072,2.056,0.087,6.061,0.087s4.48-0.015,6.061-0.087c1.462-0.067,2.257-0.311,2.785-0.516c0.7-0.272,1.2-0.597,1.725-1.122s0.85-1.025,1.122-1.725c0.205-0.529,0.45-1.323,0.516-2.785c0.072-1.582,0.087-2.056,0.087-6.061s-0.015-4.48-0.087-6.061C44.143,24.476,43.899,23.682,43.693,23.153z M32,39.703c-4.254,0-7.703-3.449-7.703-7.703s3.449-7.703,7.703-7.703s7.703,3.449,7.703,7.703S36.254,39.703,32,39.703z M40.007,25.793c-0.994,0-1.8-0.806-1.8-1.8c0-0.994,0.806-1.8,1.8-1.8c0.994,0,1.8,0.806,1.8,1.8C41.807,24.987,41.001,25.793,40.007,25.793z M0,0v64h64V0H0z M46.91,38.184c-0.073,1.597-0.326,2.687-0.697,3.641c-0.383,0.986-0.896,1.823-1.73,2.657c-0.834,0.834-1.67,1.347-2.657,1.73c-0.954,0.371-2.044,0.624-3.641,0.697C36.585,46.983,36.074,47,32,47s-4.585-0.017-6.184-0.09c-1.597-0.073-2.687-0.326-3.641-0.697c-0.986-0.383-1.823-0.896-2.657-1.73c-0.834-0.834-1.347-1.67-1.73-2.657c-0.371-0.954-0.624-2.044-0.697-3.641C17.017,36.585,17,36.074,17,32c0-4.074,0.017-4.585,0.09-6.185c0.073-1.597,0.326-2.687,0.697-3.641c0.383-0.986,0.896-1.823,1.73-2.657c0.834-0.834,1.67-1.347,2.657-1.73c0.954-0.371,2.045-0.624,3.641-0.697C27.415,17.017,27.926,17,32,17s4.585,0.017,6.184,0.09c1.597,0.073,2.687,0.326,3.641,0.697c0.986,0.383,1.823,0.896,2.657,1.73c0.834,0.834,1.347,1.67,1.73,2.657c0.371,0.954,0.624,2.044,0.697,3.641C46.983,27.415,47,27.926,47,32C47,36.074,46.983,36.585,46.91,38.184z M32,27c-2.761,0-5,2.239-5,5s2.239,5,5,5s5-2.239,5-5S34.761,27,32,27z"/></symbol><symbol id="email-icon" viewBox="0 0 64 64"><path d="M17,22v20h30V22H17z M41.1,25L32,32.1L22.9,25H41.1z M20,39V26.6l12,9.3l12-9.3V39H20z"/></symbol><symbol id="email-mask" viewBox="0 0 64 64"><path d="M41.1,25H22.9l9.1,7.1L41.1,25z M44,26.6l-12,9.3l-12-9.3V39h24V26.6z M0,0v64h64V0H0z M47,42H17V22h30V42z"/></symbol></svg>
-
-
-
 </body>
-
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 70">
-
-  <defs>
-    <path id="github-icon" d="M32,16c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7
-      c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3
-      c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6
-      c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5c3.1-2.1,4.4-1.6,4.4-1.6c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3
-      c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4c0,0.4,0.3,0.9,1.1,0.8C43.4,45.1,48,39.1,48,32
-      C48,23.2,40.8,16,32,16z" />
-    <mask id="github-mask" fill="white">
-      <path d="M0,0v64h64V0H0z M37.1,47.2c-0.8,0.2-1.1-0.3-1.1-0.8c0-0.5,0-2.3,0-4.4c0-1.5-0.5-2.5-1.1-3
-        c3.6-0.4,7.3-1.7,7.3-7.9c0-1.7-0.6-3.2-1.6-4.3c0.2-0.4,0.7-2-0.2-4.2c0,0-1.3-0.4-4.4,1.6c-1.3-0.4-2.6-0.5-4-0.5
-        c-1.4,0-2.7,0.2-4,0.5c-3.1-2.1-4.4-1.6-4.4-1.6c-0.9,2.2-0.3,3.8-0.2,4.2c-1,1.1-1.6,2.5-1.6,4.3c0,6.1,3.7,7.5,7.3,7.9
-        c-0.5,0.4-0.9,1.1-1,2.1c-0.9,0.4-3.2,1.1-4.7-1.3c0,0-0.8-1.5-2.5-1.6c0,0-1.6,0-0.1,1c0,0,1,0.5,1.8,2.3c0,0,0.9,3.1,5.4,2.1
-        c0,1.3,0,2.3,0,2.7c0,0.4-0.3,0.9-1.1,0.8C20.6,45.1,16,39.1,16,32c0-8.8,7.2-16,16-16c8.8,0,16,7.2,16,16
-        C48,39.1,43.4,45.1,37.1,47.2z" />
-    </mask>
-  </defs>
-
-  <defs>
-    <path id="linkedin-icon" transform="scale(0.7) translate(9.6, 9.6)" d="M52 8H12C9.8 8 8 9.8 8 12v40c0 2.2 1.8 4 4 4h40c2.2 0 4-1.8 4-4V12c0-2.2-1.8-4-4-4zM24.9 52h-8.3V25.3h8.3V52zm-4.2-30.4c-2.7 0-4.8-2.2-4.8-4.8s2.2-4.8 4.8-4.8 4.8 2.2 4.8 4.8-2.1 4.8-4.8 4.8zM52 52h-8.3V39c0-3.1-.1-7.1-4.3-7.1s-5 3.4-5 6.8V52h-8.3V25.3h8V28.9h.1c1.1-2.1 3.8-4.3 7.9-4.3 8.4 0 10 5.5 10 12.7V52z"/>
-    <mask id="linkedin-mask" fill="white">
-      <path d="M0,0v64h64V0H0z M52,52h-8.3V39c0-3.1-0.1-7.1-4.3-7.1s-5,3.4-5,6.8V52h-8.3V25.3h8v3.6h0.1
-        c1.1-2.1,3.8-4.3,7.9-4.3c8.4,0,10,5.5,10,12.7V52z M24.9,52h-8.3V25.3h8.3V52z M20.7,21.6c-2.7,0-4.8-2.2-4.8-4.8
-        s2.2-4.8,4.8-4.8s4.8,2.2,4.8,4.8S23.3,21.6,20.7,21.6z M56,52c0,2.2-1.8,4-4,4H12c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4
-        h40c2.2,0,4,1.8,4,4V52z"/>
-    </mask>
-  </defs>
-  
-  <!-- LinkedIn Icon -->
-
-</svg>
-
 </html>
