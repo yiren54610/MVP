@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
+  
+   <style>
+        .sigmar-regular {
+            font-family: "Sigmar", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .pt-serif-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+
+            .pt-serif-bold {
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            font-style: normal;
+            }
+
+            .pt-serif-regular-italic {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: italic;
+            }
+
+            .pt-serif-bold-italic {
+            font-family: "PT Serif", serif;
+            font-weight: 700;
+            font-style: italic;
+            }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PT Serif", serif;
+            padding: 0;
+            background: linear-gradient(30deg, #bfd8d8 30%, #a8c0c0 100%);
+            margin-left: 0;
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+        }
+
+        /* 页眉 */
+        .header {
+            padding: 30px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            height: auto;
+            background-color: rgba(221, 221, 221, 0.5);
+            border-bottom: 0;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            color: #4e4e4e;
+            font-family: "PT Serif", serif;
+            margin: 0;
+        }
+
+        /* 导航栏的样式 */
+        .topnav {
+            display: flex;
+            overflow: hidden;
+            z-index: 2;
+            position: fixed;
+            top: 110px; /* 调整 top 值，使其与 header 的底部对齐 */
+            width: 100%;
+            font-family: "PT Serif", serif;
+            background-color: rgba(221, 221, 221, 0.5); /* 与 header 背景一致 */
+            border-bottom: 2px solid #4e4e4e; /* 添加底部边框 */
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #4e4e4e;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            position: relative; /* 用于高亮效果 */
+        }
+
+        .topnav a:hover {
+            background-color: #f5f5f5;
+            color: #3498db;
+        }
+
+        /* 高亮底部线效果 */
+        .topnav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px; /* 与 header 的底部线重叠 */
+            width: 100%;
+            height: 2px;
+            background-color: #3498db; /* 高亮颜色 */
+            transform: scaleX(0); /* 初始状态不可见 */
+            transition: transform 0.3s ease;
+        }
+
+        .topnav a:hover::after {
+            transform: scaleX(1); /* 鼠标悬停时显示高亮线 */
+        }
+
+        /* Modified columns */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+            padding-left: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 10px;
+        }
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* 80% opacity */
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Add this new rule */
+        .rightcolumn .card {
+            background-color: rgba(221, 221, 221, 0.5);
+        }
+
+        .footer {
+            background-color: rgba(221, 221, 221, 0.5);
+            color: #4e4e4e;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .leftcolumn {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .iframe-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+            position: relative;
+            display: inline-block;
+            line-height: 1.4;
+            font-family: "PT Serif", serif;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        h2:hover:after {
+            width: 100%;
+        }
+
+        .right-column-heading {
+            color: #4e4e4e;;
+        }
+
+        h2:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin: 4px;
+            text-transform: capitalize;
+            white-space: nowrap;
+            color: white;
+        }
+
+        .tag[data-skill="Python"] {
+            background-color: #3776AB;
+        }
+
+        .tag[data-skill="RStudio"] {
+            background-color: #75AADB;
+        }
+
+        .tag[data-skill="GGplot"] {
+            background-color: #db75b6;
+        }
+
+        .tag[data-skill="Webscraping"] {
+            background-color: #F59E0B;
+        }
+
+        .tag[data-skill="BeautifulSoup"] {
+            background-color: #4CAF50;
+        }
+
+        .tag[data-skill="Playwright"] {
+            background-color: darkkhaki;
+        }
+
+        .tag[data-skill="API"] {
+            background-color: coral;
+        }
+
+        .tag[data-skill="Mapping"] {
+            background-color: lightpink;
+        }
+
+        .tag[data-skill="HTML"] {
+            background-color: orchid;
+        }
+
+        .tag[data-skill="RAWGraphs"] {
+            background-color: navajowhite;
+        }
+
+        .tag[data-skill="Illustrator"] {
+            background-color: olivedrab;
+        }
+
+        .tag[data-skill="QGIS"] {
+            background-color: orangered;
+        }
+
+        p {
+            color: #3d3d3d;
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        .icon-text {
+            display: inline-block;
+            font-size: 2em;
+            color: rgba(221, 221, 221, 0.5);
+        }
+
+        .content {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 640px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .fab.fa-linkedin {
+            color: #3d3d3d;
+        }
+
+        .fab.fa-github {
+            color: #3d3d3d;
+        }
+
+        .far.fa-envelope {
+            color: #3d3d3d;
+        }
+    </style>
+    <style>
+        #datawrapper-chart-B878o {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+        }
+
+        @media (max-width: 768px) {
+            #datawrapper-chart-B878o {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #datawrapper-chart-B878o {
+                min-height: 200px;
+            }
+        }
+    </style>
+    <style>
+  .iframe-preview-container {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scaled-iframe {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.7); /* Adjust scale value (0.7 = 70% size) */
+    transform-origin: 0 0;
+    border: none;
+  }
+</style>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/5087d62e1c.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome to Yiren Lu's Website</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">Data</a>
+        <a href="reporting.html">Reporting</a>
+        <a href="Audio_video.html">Audio & Video</a>
+        <a href="Data-Lu,Yiren" download style="float:right">Resume</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/trash_story/" target="_blank" style="text-decoration: none; color: inherit;">
+                        California's Zero-Waste Dream Meets a Landfill Nightmare
+                    </a>
+                </h2>
+                <p>California has long been troubled by its trash issues. 
+                    The state has signed a series of bills aiming for a zero-waste plan in the coming decades. 
+                    But beyond the millions of tons of waste that go to recycling or composting, landfills remain a long-term problem. 
+                </p>
+                <div class="content" style="text-align: left;">
+                    <img alt="trump_biden_comparison" src="pictures/header_landfills.jpg" class="image-container">
+                </div>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="QGIS">QGIS</span>
+                <span class="tag" data-skill="Mapping">Mapping</span>
+                <span class="tag" data-skill="RStudio">RStudio</span>
+                <span class="tag" data-skill="Illustrator">Illustrator</span>
+            </div>
+
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/ECI-and-DPI/" target="_blank" style="text-decoration: none; color: inherit;">
+                        Post-COVID Reality: Income Rises But Pessimism Continues
+                    </a>
+                </h2>
+                <p>Real Icome VS Economic Confidence index
+                    <br>
+                    Comparing real disposable income and economic confidence index during Trump's last administration and Biden's administration.
+                </p>
+                <div class="content" style="text-align: left;">
+                    <img alt="trump_biden_comparison" src="pictures/In_one_chart.png" class="image-container">
+                </div>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="GGplot">GGplot</span>
+                <span class="tag" data-skill="RStudio">RStudio</span>
+            </div>
+
+
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/Bigfoot/" target="_blank" style="text-decoration: none; color: inherit;">
+                        What's Standing Between Us and Proof of Bigfoot?
+                    </a>
+                </h2>
+                <p>Use mapping tools to visualize the caveats</p>
+                <div class="content" style="text-align: left;">
+                    <iframe title="" aria-label="Map" id="datawrapper-chart-MRACJ" src="https://datawrapper.dwcdn.net/MRACJ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="419" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
+                    </script>
+                </div>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                <span class="tag" data-skill="Webscraping">Webscraping</span>
+                <span class="tag" data-skill="API">API</span>
+                <span class="tag" data-skill="Mapping">Mapping</span>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/olympic_us/" target="_blank" style="text-decoration: none; color: inherit;">
+                        Why the 2024 Paris Olympics Marked the Triumph of US Female Athletes
+                    </a>
+                </h2>
+                <p>Comparing percentages of medals obtained, average medal counts per person, and total numbers.</p>
+                <div class="content" style="text-align: left;">
+                    <img alt="Olympics_all_medal scatter plots preview" src="pictures/team.png" class="image-container">
+                </div>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                <span class="tag" data-skill="Webscraping">Webscraping</span>
+                <span class="tag" data-skill="RStudio">RStudio</span>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/Amazon/" target="_blank" style="text-decoration: none; color: inherit;">
+                        What are richer people buying online?
+                    </a>
+                </h2>
+                <p>An analysis of over a million purchases on Amazon.</p>
+                <div class="content" style="text-align: left;">
+                    <img alt="chart showing people's expenditures on different categories" src="pictures/bar_chart.svg" class="image-container">
+                </div>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="Illustrator">Illustrator</span>
+                <span class="tag" data-skill="HTML">HTML</span>
+                <span class="tag" data-skill="RAWGraphs">RAWGraphs</span>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/Map_Final/" target="_blank" style="text-decoration: none; color: inherit;">BBC Movie Menu</a>
+                </h2>
+                <p>This is an interactive map that is based upon BBC's 100 movie critics' recommendation.</p>
+                <iframe src="https://yiren54610.github.io/Map_Final/" class="iframe-container"></iframe>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
+                <span class="tag" data-skill="Webscraping">Webscraping</span>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <a href="https://yiren54610.github.io/Foundation_final/" target="_blank" style="text-decoration: none; color: inherit;">Popular Color Tracking</a>
+                </h2>
+                <p>This is a website that tracks emerging color trends</p>
+                <iframe src="https://yiren54610.github.io/Foundation_final/" class="iframe-container"></iframe>
+                <span class="tag" data-skill="Python">Python</span>
+                <span class="tag" data-skill="Playwright">Playwright</span>
+            </div>
+
+            
+        </div>
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h2 class="right-column-heading">About Me</h2>
+                <img src="pictures/Profile.jpg" alt="Yiren Lu in Philly" height="200" style="max-width: 100%; height: auto; border-radius: 50%; display: block;">
+                <p><b>Candidate @ Columbia Journalism School</b>
+                    <br>
+                    Hi there! Welcome to my website. This is the garden of my inner world. I was an anthropologist with a background in statistics before transitioning into journalism, so I explore the human world through a quantitative lens. Interested in visual storytelling and data viz. Feel free to contact me!
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 class="right-column-heading">Follow Me</h2>
+                <p>
+                    <span class="icon-text">
+                        <span class="icon is-large">
+                            <a href="https://github.com/yiren54610">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="icon-text">
+                        <span class="icon is-large">
+                            <a href="https://www.linkedin.com/in/yiren-lu-777295237/">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="icon-text">
+                        <span class="icon is-large">
+                            <a href="mailto:yl5732@columbia.edu?%0A%0ABest%20regards%2C%0A[Your%20Name]">
+                                <i class="far fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </span>
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 class="right-column-heading">Recent Activities.</h2>
+                <p>
+                    I just published an interesting chart on real disposable income and economic confidence index. Check it out here: <a href="https://yiren54610.github.io/ECI-and-DPI/">Post-COVID Reality: Income Rises But Pessimism Continues</a>
+                    <br>
+                    Right now, I am working on a data story about California's trash crisis. Stay tuned! 
+                    <br>
+                    The color trend website is down for now. I am working on a new version of it.
+                    <br>
+                    (Last updated on 2025-04-06)
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Yiren Lu Class of 2025</h2>
+    </div>
+</body>
+
+</html>

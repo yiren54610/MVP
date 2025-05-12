@@ -1,7 +1,88 @@
-
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US" >
 <style> 
+    .video-card {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-bottom: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-column {
+      flex: 1;
+      min-width: 0; /* Prevent flex item from overflowing */
+    }
+
+    .text-column {
+      flex: 1;
+      min-width: 0; /* Prevent flex item from overflowing */
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    .card-title {
+      color: #2c3e50;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-family: "PT Serif", serif;
+      font-size: 1.4rem;
+    }
+
+    .card-description {
+      color: #3d3d3d;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* Social icons styling */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .sqs-svg-icon--wrapper {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+    
+    .sqs-svg-icon--social {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 800px) {
+      .video-card {
+        flex-direction: column;
+      }
+      
+      .video-column, .text-column {
+        flex: none;
+        width: 100%;
+      }
+    }
+
 /* Modified columns for 3 cards per row */
 .leftcolumn {
     float: left;
@@ -92,65 +173,6 @@ h2:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tag {
-    display: inline-block;
-    font-size: 0.8rem;  /* Smaller font size for tags */
-    font-weight: 500;
-    padding: 3px 8px;  /* Smaller padding for tags */
-    border-radius: 999px;
-    margin: 3px;
-    text-transform: capitalize;
-    white-space: nowrap;
-    color: white;
-}
-
-.tag[data-skill="Python"] {
-    background-color: #3776AB;
-}
-
-.tag[data-skill="RStudio"] {
-    background-color: #75AADB;
-}
-
-.tag[data-skill="GGplot"] {
-    background-color: #db75b6;
-}
-
-.tag[data-skill="Webscraping"] {
-    background-color: #F59E0B;
-}
-
-.tag[data-skill="BeautifulSoup"] {
-    background-color: #4CAF50;
-}
-
-.tag[data-skill="Playwright"] {
-    background-color: darkkhaki;
-}
-
-.tag[data-skill="API"] {
-    background-color: coral;
-}
-
-.tag[data-skill="Mapping"] {
-    background-color: lightpink;
-}
-
-.tag[data-skill="HTML"] {
-    background-color: orchid;
-}
-
-.tag[data-skill="RAWGraphs"] {
-    background-color: navajowhite;
-}
-
-.tag[data-skill="Illustrator"] {
-    background-color: olivedrab;
-}
-
-.tag[data-skill="QGIS"] {
-    background-color: orangered;
-}
 
 p {
     color: #3d3d3d;
@@ -256,7 +278,7 @@ p {
             
               <li class="page-collection">
                 
-                  <a href="AUDIO&VIDEO.html">Audio&Video</a>
+                  <a href="/work">Audio&Video</a>
                 
                 
               </li>
@@ -312,13 +334,8 @@ p {
         
 
           
-            <a href="/">DATA</a>
-          
+            <a href="index.html">DATA</a>
 
-          
-
-
-        
 
       </li>
 
@@ -329,7 +346,7 @@ p {
         
 
           
-            <a href="/work">Audio & Video</a>
+            <a href="AUDIO & VIDEO.html">Audio & Video</a>
           
 
           
@@ -367,13 +384,6 @@ p {
       <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1591924730221" id="page-5edd8f6e9ae1433b3ac5c872"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="row sqs-row"><div class="col sqs-col-7 span-7"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-aa195b5d287474dc119d"><div class="sqs-block-content">
 
 <div class="sqs-html-content">
-  <h1 style="white-space:pre-wrap;">About</h1><p class="" style="white-space:pre-wrap;">
-    Hi there! Welcome to my website. This is the garden of my inner world. I was an anthropologist with a background in statistics before transitioning into journalism, so I explore the human world through a quantitative lens. Interested in visual storytelling and data viz.
-    </p>
-    <p class="" style="white-space:pre-wrap;">
-      Feel free to contact me!
-    </strong></p>
-
 
     <div id="socialLinks" class="social-links sqs-svg-icon--list" data-content-field="connected-accounts">
           
@@ -532,30 +542,6 @@ p {
   
 
           >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:80.53829956054688%;
-                
-                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
-              "
-              >
-                
-                
-                
-                
-                
-                
-                
-              <img src="pictures/Profile.jpg" alt="Profile Picture" width="596" height="593" style="display:block; object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%;">
-
-
-            </div>
           </div>
         
           
@@ -602,164 +588,54 @@ p {
   
   
 >
-    <div class="sqs-gallery">
 
-      <div class="row">
-        <div class="leftcolumn">
-          <div class="card">
-            <h2>
-                <a href="https://yiren54610.github.io/project_5/" target="_blank" style="text-decoration: none; color: inherit;">
-                    How Tall Are They?
-                </a>
-            </h2>
-            <p>Gender representation in animation, movies, 
-              and TV shows has long been a central concern among critics of popular culture. 
-              This story takes a data-driven approach to the conversation by analyzing the most beloved characters on MyAnimeList.
-            </p>
-            <div class="content" style="text-align: left;">
-                <img alt="Beeswarm Charts of Height Distribution" src="pictures/beeswarm-laptop.png" class="image-container">
+                    <div class="sqs-gallery">
+                      <!-- Video Card 1 -->
+                      <div class="video-card">
+                        <div class="video-column">
+                          <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7dTj7JGZc34?si=XUGtIQE9vzDz9efg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                        <div class="text-column">
+                          <h2 class="card-title">Dialogue With Celine Bassman</h2>
+                          <p class="card-description">
+                            This short documentary, created during my time at Wesleyan University, 
+                            captures an intimate conversation with Celine Bassman, a student choreographer, 
+                            as she unveils the heart of her capstone project. The film traces the arc of creation— 
+                            from raw inspiration to the breathtaking final stage.
+                            <br><br>
+                            Produced by Yiren Lu
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Video Card 2 -->
+                      <div class="video-card">
+                        <div class="video-column">
+                          <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/X4WPG-1wN2c?si=-BGvvIcBhm8UC3FG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                        <div class="text-column">
+                          <h2 class="card-title">With Sonia--Find The Moon</h2>
+                          <p class="card-description">
+                            Sonia Guan is a playwright and songwriter who spent a year collaborating with friends on a musical project. 
+                            This piece reflects her creative journey. 
+                            The video was made to celebrate her graduation and dedication.
+                            <br><br>
+                            Produced by Yiren Lu
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="tag" data-skill="Python">Python</span>
-            <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-            <span class="tag" data-skill="Playwright">Playwright</span>
-            <span class="tag" data-skill="RStudio">RStudio</span>
-            <span class="tag" data-skill="Illustrator">Illustrator</span>
+          </div>
         </div>
-
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/trash_story/" target="_blank" style="text-decoration: none; color: inherit;">
-                        California's Zero-Waste Dream Meets a Landfill Nightmare
-                    </a>
-                </h2>
-                <p>California has long been troubled by its trash issues. 
-                    The state has signed a series of bills aiming for a zero-waste plan in the coming decades. 
-                    But beyond the millions of tons of waste that go to recycling or composting, landfills remain a long-term problem. 
-                </p>
-                <div class="content" style="text-align: left;">
-                    <img alt="trump_biden_comparison" src="pictures/header_landfills.jpg" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="QGIS">QGIS</span>
-                <span class="tag" data-skill="Mapping">Mapping</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
-                <span class="tag" data-skill="Illustrator">Illustrator</span>
-            </div>
-
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/ECI-and-DPI/" target="_blank" style="text-decoration: none; color: inherit;">
-                        Post-COVID Reality: Income Rises But Pessimism Continues
-                    </a>
-                </h2>
-                <p>Real Icome VS Economic Confidence index
-                    <br>
-                    Comparing real disposable income and economic confidence index during Trump's last administration and Biden's administration.
-                </p>
-                <div class="content" style="text-align: left;">
-                    <img alt="trump_biden_comparison" src="pictures/In_one_chart.png" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="GGplot">GGplot</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
-            </div>
-
-
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Bigfoot/" target="_blank" style="text-decoration: none; color: inherit;">
-                        What's Standing Between Us and Proof of Bigfoot?
-                    </a>
-                </h2>
-                <p>Use mapping tools to visualize the caveats</p>
-                <div class="content" style="text-align: left;">
-                    <iframe title="" aria-label="Map" id="datawrapper-chart-MRACJ" src="https://datawrapper.dwcdn.net/MRACJ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="419" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
-                    </script>
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
-                <span class="tag" data-skill="API">API</span>
-                <span class="tag" data-skill="Mapping">Mapping</span>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/olympic_us/" target="_blank" style="text-decoration: none; color: inherit;">
-                        Why the 2024 Paris Olympics Marked the Triumph of US Female Athletes
-                    </a>
-                </h2>
-                <p>Comparing percentages of medals obtained, average medal counts per person, and total numbers.</p>
-                <div class="content" style="text-align: left;">
-                    <img alt="Olympics_all_medal scatter plots preview" src="pictures/team.png" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
-                <span class="tag" data-skill="RStudio">RStudio</span>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Amazon/" target="_blank" style="text-decoration: none; color: inherit;">
-                        What are richer people buying online?
-                    </a>
-                </h2>
-                <p>An analysis of over a million purchases on Amazon.</p>
-                <div class="content" style="text-align: left;">
-                    <img alt="chart showing people's expenditures on different categories" src="pictures/bar_chart.svg" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="Illustrator">Illustrator</span>
-                <span class="tag" data-skill="HTML">HTML</span>
-                <span class="tag" data-skill="RAWGraphs">RAWGraphs</span>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Map_Final/" target="_blank" style="text-decoration: none; color: inherit;">BBC Movie Menu</a>
-                </h2>
-                <p>This is an interactive map that is based upon BBC's 100 movie critics' recommendation.</p>
-                <div class="content" style="text-align: left;">
-                  <img alt="BBC Movie Menu" src="pictures/BBC_Movies.jpg" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="BeautifulSoup">BeautifulSoup</span>
-                <span class="tag" data-skill="Webscraping">Webscraping</span>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <a href="https://yiren54610.github.io/Foundation_final/" target="_blank" style="text-decoration: none; color: inherit;">Popular Color Tracking</a>
-                </h2>
-                <p>This is a website that tracks emerging color trends</p>
-                <div class="content" style="text-align: left;">
-                  <img alt="Color palettes" src="pictures/colors.jpg" class="image-container">
-                </div>
-                <span class="tag" data-skill="Python">Python</span>
-                <span class="tag" data-skill="Playwright">Playwright</span>
-            </div>
-
-            
-        </div>
-
-  
-  
-
-</div>
-
-
-
-
-
-
-  
-  
-
-</div></div></div></div></div>
+      </div>
     </section>
 
     <div class="extra-wrapper page-footer">
@@ -770,14 +646,9 @@ p {
 
     <footer id="footer">
       <div class="sqs-layout sqs-grid-1 columns-1 empty" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1591644324253" id="footerBlock"><div class="row sqs-row"><div class="col sqs-col-1 span-1"></div></div></div>
-      
-
-      
     </footer>
-
   </div>
 
-  <div></div>
 
   <script defer="true" src="https://static1.squarespace.com/static/ta/4fd1028ee4b02be53c65dfb3/1361/scripts/site-bundle.js" type="text/javascript"></script>
 
