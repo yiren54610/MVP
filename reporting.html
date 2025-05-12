@@ -1,376 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sigmar&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reporting - Yiren Lu's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiren Lu - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        .sigmar-regular {
-            font-family: "Sigmar", sans-serif;
-            font-weight: 400;
-            font-style: normal;
+/* New header styles */
+        .name-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: none;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 999;
+        }
+        
+        .name-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        /* Adjust topNav position to account for new header */
+        #topNav {
+            position: fixed;
+            top: 60px; /* Increased to account for name header */
+            right: 0;
+            padding: 20px;
+            z-index: 1000;
+        }
+        
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .main-nav li {
+            margin: 0;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        /* Adjust container to account for fixed nav and header */
+        .container {
+            margin-top: 140px; /* Increased to account for both header and nav */
         }
 
-        .pt-serif-regular {
-            font-family: "PT Serif", serif;
-            font-weight: 400;
-            font-style: normal;
+        
+        .active-link a {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+        
+
+        /* Keep all your existing styles below exactly as they are */
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .pt-serif-bold {
-            font-family: "PT Serif", serif;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        .pt-serif-regular-italic {
-            font-family: "PT Serif", serif;
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .pt-serif-bold-italic {
-            font-family: "PT Serif", serif;
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        /* General Styles */
-        * {
-            box-sizing: border-box;
+        /* Profile Section Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         body {
-            font-family: "PT Serif", serif;
-            padding: 0;
-            background: linear-gradient(30deg, #bfd8d8 30%, #a8c0c0 100%);
-            margin-top: 60px;
-            margin-left: 0;
-        }
-
-        /* Header */
-        .header {
-            padding: 30px;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-            height: auto;
-            background-color: rgba(221, 221, 221, 0.5);
-            border-bottom: 0;
-        }
-
-        .header h1 {
-            font-size: 40px;
-            color: #4e4e4e;
-            font-family: 'PT Serif', sans-serif;
+            font-family: 'PT Serif', serif;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Navigation */
-        .topnav {
+        .profile {
             display: flex;
-            overflow: hidden;
-            z-index: 2;
-            position: fixed;
-            top: 110px;
-            width: 100%;
-            font-family: 'PT Serif', sans-serif;
-            background-color: rgba(221, 221, 221, 0.5);
-            border-bottom: 2px solid #4e4e4e;
+            align-items: center;
+            background-color: none;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
         }
 
-        .topnav a {
-            float: left;
-            display: block;
-            color: #4e4e4e;
-            text-align: center;
-            padding: 14px 16px;
+        .profile-image {
+            max-width: 250px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-content h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .profile-content p {
+            color: #3d3d3d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Social Links Styles */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            position: relative;
-        }
-
-        .topnav a:hover {
-            background-color: #f5f5f5;
-            color: #3498db;
-        }
-
-        .topnav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 2px;
-            background-color: #3498db;
-            transform: scaleX(0);
+            color: #2c3e50;
             transition: transform 0.3s ease;
         }
 
-        .topnav a:hover::after {
-            transform: scaleX(1);
+        .social-links a:hover {
+            transform: scale(1.1);
         }
 
-        /* Main Content */
+        .social-links svg {
+            margin-right: 8px;
+        }
+
+        /* Article Grid Styles */
         .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 100%;
         }
 
         .col {
-            flex: 0 0 calc(33.33% - 20px);
-            box-sizing: border-box;
-            margin-bottom: 30px;
-            margin-right: 20px;
-        }
-
-        .col:nth-child(3n) {
-            margin-right: 0;
-        }
-
-        /* For the last row with only 2 items */
-        .col:nth-last-child(2):not(:nth-child(3n+1)) {
-            margin-right: 20px;
-        }
-
-        /* For the last item in the row */
-        .col:last-child {
-            margin-right: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         .card {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 12px;
-            height: 650px;
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            transform: translateY(-5px);
+            transform: scale(1.03);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         .iframe-container {
             width: 100%;
-            height: 400px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .iframe-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            margin-top: auto;
         }
 
         .iframe-container img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
 
-        .iframe-container:hover img {
-            transform: scale(1.05);
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-weight: 600;
-            transition: transform 0.2s ease;
-            position: relative;
-            display: inline-block;
-            line-height: 1.4;
-            font-family: 'PT Serif', sans-serif;
-            font-size: 1.3em;
-        }
-
-        h2:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #3498db;
-            transition: width 0.3s ease;
-        }
-
-        h2:hover:after {
-            width: 100%;
-        }
-
-        p {
-            color: #3d3d3d;
-            line-height: 1.6;
-            margin: 0;
-            padding-bottom: 1.2em;
-        }
-
-        a:hover {
-            color: #3498db;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(221, 221, 221, 0.5);
-            margin-top: 20px;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 800px) {
-            .col {
-                flex: 0 0 100%;
+        /* Responsive Breakpoints */
+        @media screen and (max-width: 1200px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-image {
                 margin-right: 0;
+                margin-bottom: 20px;
             }
-            
-            .card {
-                height: auto;
-                min-height: 650px;
+            .row {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .iframe-container {
-                height: 350px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .row {
+                grid-template-columns: 1fr;
             }
-            
-            h2 {
-                font-size: 1.4em;
+            .leftcolumn {
+                padding: 0 15px;
             }
         }
     </style>
 </head>
-
 <body>
-    <header class="header">
-        <h1>Welcome to Yiren Lu's Website</h1>
-    </header>
 
-    <nav class="topnav">
-        <a href="index.html">Data</a>
-        <a href="reporting.html">Reporting</a>
-        <a href="Audio_video.html">Audio & Video</a>
-        <a href="Yiren_Lu_Resume.pdf" style="float:right">Resume</a>
-    </nav>
+    <div id="topNav" data-content-field="navigation">
+        <nav class="main-nav">
+            <ul>
+                <li class="page-collection">
+                    <a href="https://yiren54610.github.io/MVP/">DATA</a>
+                </li>
+                <li class="page-collection">
+                    <a href="reporting.html">Reporting</a>
+                </li>
+                <li class="page-collection active-link">  
+                    <a href="media.html">Audio & Video</a>
+                </li>
+                <li class="page-collection">            
+                    <a href="Data-Lu,Yiren.pdf" download>RESUME</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
-    <main class="row">
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="http://theuptowner.org/anti-vaccine-demonstrators-spread-false-conspiracy-theories-at-harlem-rally/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                        Anti-vaxxers Call Process of Vaccination "Invasive" and "Profit-Making" by Big Pharmas in Harlem Rally
+    <div class="container">
+        <section class="profile">
+            <img src="pictures/Profile.jpg" alt="Yiren Lu - Profile Picture" class="profile-image" loading="lazy">
+            <div class="profile-content">
+                <h1>About Me</h1>
+                <p>Hi there! This is Yiren Lu. Welcome to my website. This is the garden of my inner world. I was an anthropologist with a background in statistics before transitioning into journalism, so I explore the human world through a quantitative lens. Interested in visual storytelling and data viz.</p>
+                <p>Feel free to contact me!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lindadada666/" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        Instagram
                     </a>
-                </h2>
-                <p>Yiren Lu, Rashi Mishra</p>
-                <div class="iframe-container">
-                    <img src="pictures/harlem.jpeg" alt="Anti-vaxxers rally in Harlem" loading="lazy">
+                    <a href="mailto:yl5732@columbia.edu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/yiren-lu-777295237/" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/yiren54610" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="http://theuptowner.org/trash-bin-program-eases-harlem-rat-sightings-but-parking-challenges-continue/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                        Trash Bin Program Eases Rat Issues But Parking Challenges Continue
-                    </a>
-                </h2>
-                <p>Yiren Lu<br>September 23, 2024</p>
-                <div class="iframe-container">
-                    <img src="pictures/transhbin.jpg" alt="Trash bins in the street" loading="lazy">
+        <div class="leftcolumn">
+            <main class="row">
+                <div class="col">
+                    <div class="card">
+                        <h2>
+                            <a href="http://theuptowner.org/anti-vaccine-demonstrators-spread-false-conspiracy-theories-at-harlem-rally/" 
+                               target="_blank" 
+                               style="text-decoration: none; color: inherit;">
+                                Anti-vaxxers Call Process of Vaccination "Invasive" and "Profit-Making" by Big Pharmas in Harlem Rally
+                            </a>
+                        </h2>
+                        <p>Yiren Lu, Rashi Mishra</p>
+                        <div class="iframe-container">
+                            <img src="pictures/harlem.jpeg" alt="Anti-vaxxers rally in Harlem" loading="lazy">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                        K-3 Classes Remain Overcrowded in Harlem Schools
-                    </a>
-                </h2>
-                <p>Yiren Lu, Tiffany Wang<br>October 18, 2024</p>
-                <div class="iframe-container">
-                    <img src="pictures/Harlem-Schools-800x365.jpg" alt="Harlem Schools" loading="lazy">
+                <div class="col">
+                    <div class="card">
+                        <h2>
+                            <a href="http://theuptowner.org/trash-bin-program-eases-harlem-rat-sightings-but-parking-challenges-continue/" 
+                               target="_blank" 
+                               style="text-decoration: none; color: inherit;">
+                                Trash Bin Program Eases Rat Issues But Parking Challenges Continue
+                            </a>
+                        </h2>
+                        <p>Yiren Lu<br>September 23, 2024</p>
+                        <div class="iframe-container">
+                            <img src="pictures/transhbin.jpg" alt="Trash bins in the street" loading="lazy">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="reporting/animal_shelter.html" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                        Crowded Kennels Sound the Alarm for NYC Animal Shelters
-                    </a>
-                </h2>
-                <p>Yiren Lu, Yating Wang<br>December 10, 2024</p>
-                <div class="iframe-container">
-                    <img src="data_charts/Line_chart_catsdogs.jpeg" alt="Line charts showing dogs and cats" loading="lazy">
+                <div class="col">
+                    <div class="card">
+                        <h2>
+                            <a href="https://theuptowner.org/k-3-classes-remain-overcrowded-in-harlem-schools/" 
+                               target="_blank" 
+                               style="text-decoration: none; color: inherit;">
+                                K-3 Classes Remain Overcrowded in Harlem Schools
+                            </a>
+                        </h2>
+                        <p>Yiren Lu, Tiffany Wang<br>October 18, 2024</p>
+                        <div class="iframe-container">
+                            <img src="pictures/Harlem-Schools-800x365.jpg" alt="Harlem Schools" loading="lazy">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col">
-            <div class="card">
-                <h2>
-                    <a href="reporting/canine.html" 
-                       target="_blank" 
-                       style="text-decoration: none; color: inherit;">
-                        Cardinal Canines: Service Dog Training at Wesleyan
-                    </a>
-                </h2>
-                <p>Yiren Lu<br>March 4, 2023</p>
-                <div class="iframe-container">
-                    <img src="pictures/Service Dogs.JPG" alt="Service Dogs" loading="lazy">
+                <div class="col">
+                    <div class="card">
+                        <h2>
+                            <a href="reporting/animal_shelter.html" 
+                               target="_blank" 
+                               style="text-decoration: none; color: inherit;">
+                                Crowded Kennels Sound the Alarm for NYC Animal Shelters
+                            </a>
+                        </h2>
+                        <p>Yiren Lu, Yating Wang<br>December 10, 2024</p>
+                        <div class="iframe-container">
+                            <img src="data_charts/Line_chart_catsdogs.jpeg" alt="Line charts showing dogs and cats" loading="lazy">
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="col">
+                    <div class="card">
+                        <h2>
+                            <a href="reporting/canine.html" 
+                               target="_blank" 
+                               style="text-decoration: none; color: inherit;">
+                                Cardinal Canines: Service Dog Training at Wesleyan
+                            </a>
+                        </h2>
+                        <p>Yiren Lu<br>March 4, 2023</p>
+                        <div class="iframe-container">
+                            <img src="pictures/Service Dogs.JPG" alt="Service Dogs" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </main>
-
-    <footer class="footer">
-        <h2>Yiren Lu Class of 2025</h2>
-    </footer>
-
-    <script>
-        // Sticky Header
-        window.onscroll = function() {
-            var header = document.querySelector('.header');
-            var sticky = header.offsetTop;
-
-            if (window.pageYOffset > sticky) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        };
-    </script>
+    </div>
 </body>
 </html>
